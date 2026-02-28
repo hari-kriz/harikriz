@@ -1012,7 +1012,7 @@ body {
 
 @media (min-width: 1200px) {
   .project-cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 /* ============================================
@@ -1182,9 +1182,9 @@ body {
 .tech-icons {
   display: grid;
   gap: var(--space-md);
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-items: center;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  justify-items: stretch;
 }
 
 /* Individual Technology Icon */
@@ -1193,7 +1193,13 @@ body {
   flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
-  padding: var(--space-md);
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 1rem 1rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(9, 15, 37, 0.46);
   transition: all var(--transition-medium);
   cursor: default;
 }
@@ -1203,13 +1209,13 @@ body {
   width: 64px;
   height: 64px;
   object-fit: contain;
-  filter: grayscale(100%);
-  transition: all var(--transition-medium);
+  transition: transform var(--transition-medium), filter var(--transition-medium), drop-shadow var(--transition-medium);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
 }
 
 .tech-icon:hover .tech-icon__image {
-  filter: grayscale(0%);
   transform: scale(1.1);
+  filter: drop-shadow(0 6px 14px rgba(127, 140, 255, 0.35));
 }
 
 /* Technology Icon Label */
@@ -1217,11 +1223,27 @@ body {
   font-size: 0.95rem;
   color: var(--color-text-muted);
   text-align: center;
+  font-weight: 600;
   transition: color var(--transition-medium);
 }
 
 .tech-icon:hover .tech-icon__label {
   color: var(--color-text);
+}
+
+.tech-icon__uses {
+  width: 100%;
+  margin: 0.2rem 0 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+  color: var(--color-text-muted);
+}
+
+.tech-icon__uses li {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin-bottom: 0.32rem;
+  text-align: left;
 }
 
 /* Mobile Technology Icon Styles */
@@ -1236,12 +1258,13 @@ body {
   }
 
   .tech-icons {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
   }
 
   .tech-icon {
-    padding: var(--space-sm);
+    max-width: none;
+    padding: 0.9rem;
   }
 
   .tech-icon__image {
@@ -1251,6 +1274,10 @@ body {
 
   .tech-icon__label {
     font-size: 0.875rem;
+  }
+
+  .tech-icon__uses li {
+    font-size: 0.76rem;
   }
 }
 
@@ -1265,12 +1292,12 @@ body {
   }
 
   .tech-icons {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-md);
   }
 
   .tech-icon {
-    padding: var(--space-md);
+    padding: 1rem;
   }
 
   .tech-icon__image {
@@ -1280,6 +1307,12 @@ body {
 
   .tech-icon__label {
     font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tech-icons {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 /* ============================================
