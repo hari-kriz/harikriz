@@ -1,0 +1,28 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+
+# Local planning/spec files
+.kiro/
+
+# Local helper/test artifacts
+test-*.html
+test-*.js
+verify-*.html
+verify-*.js
+verify-*.ps1
+validate-*.js
+validate-*.ps1
+*verification*.md
+task-*-verification-report.md
+
+# Local source/reference files not needed for deploy
+SPEC.txt
+CV.txt
+Picture.img.jpeg
+personal_brand_website_spec.md
+
+# Logs
+*.log
