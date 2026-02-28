@@ -1,1 +1,15 @@
-﻿<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128' role='img' aria-label='XL icon'><rect width='128' height='128' rx='24' fill='#1D6F42'/><text x='64' y='74' font-family='Arial, sans-serif' font-size='32' font-weight='700' text-anchor='middle' fill='#FFFFFF'>XL</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Excel spreadsheet icon">
+  <rect x="12" y="12" width="104" height="104" rx="22" fill="#0f2c20"/>
+  <rect x="28" y="24" width="72" height="80" rx="8" fill="#1f7a53"/>
+  <rect x="28" y="24" width="72" height="20" fill="#2a9a68"/>
+  <g stroke="#b7f0d4" stroke-width="2" opacity="0.85">
+    <line x1="46" y1="44" x2="46" y2="104"/>
+    <line x1="64" y1="44" x2="64" y2="104"/>
+    <line x1="82" y1="44" x2="82" y2="104"/>
+    <line x1="28" y1="60" x2="100" y2="60"/>
+    <line x1="28" y1="76" x2="100" y2="76"/>
+    <line x1="28" y1="92" x2="100" y2="92"/>
+  </g>
+  <rect x="32" y="64" width="10" height="28" rx="2" fill="#d7ffeb"/>
+  <rect x="48" y="54" width="10" height="38" rx="2" fill="#d7ffeb"/>
+</svg>

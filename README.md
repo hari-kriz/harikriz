@@ -8,8 +8,9 @@ Static personal brand website for Harikrishnan N.
 - `style.min.css` (production CSS)
 - `script.min.js` (production JS)
 - `images/` (profile and tech icons)
-- `Harikrishnan_N_Resume.pdf`
 - `favicon.ico`
+
+Resume download is configured via Google Drive link in `index.html`.
 
 ## Local Preview
 
