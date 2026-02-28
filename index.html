@@ -7,7 +7,7 @@
   <!-- Primary Meta Tags -->
   <title>Harikrishnan N - Trust & Safety Quality Analyst | Audit Automation Expert</title>
   <meta name="title" content="Harikrishnan N - Trust & Safety Quality Analyst">
-  <meta name="description" content="Trust & Safety Quality Analyst with 4+ years experience in audit automation, risk detection, and enforcement quality systems at Amazon Prime Video. Specializing in SQL, Python, and scalable integrity solutions.">
+  <meta name="description" content="Trust & Safety Quality Analyst with 5 years experience in audit automation, risk detection, and enforcement quality systems at Amazon Prime Video. Specializing in SQL, Python, and scalable integrity solutions.">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -54,12 +54,21 @@
   <main id="main-content">
     <!-- Hero Section -->
     <section id="hero" class="hero">
+      <div class="hero__code-bg" aria-hidden="true">
+        <span class="code-line">SELECT risk_bucket, COUNT(*) FROM enforcement_events GROUP BY risk_bucket ORDER BY COUNT(*) DESC;</span>
+        <span class="code-line">WITH defects AS (SELECT * FROM qa_signals WHERE severity = 'critical') SELECT owner, AVG(score) FROM defects GROUP BY owner;</span>
+        <span class="code-line">python audit_agent.py --source redshift --ocr cloudvision --mode enforcement_validation</span>
+        <span class="code-line">df.groupby('region')['defect_rate'].rolling(7).mean().reset_index()</span>
+        <span class="code-line">UPDATE quality_metrics SET trend = 'improving' WHERE detection_gain &gt;= 0.30;</span>
+        <span class="code-line">for batch in stream: anomalies.extend(model.detect(batch)); alert(anomalies)</span>
+      </div>
       <div class="hero__container">
         <div class="hero__image">
+          <span class="hero__name-tag">Harikrishnan N</span>
           <img src="images/profile.jpg" 
                alt="Harikrishnan N - Trust & Safety Quality Analyst"
-               width="400" 
-               height="400">
+               width="72" 
+               height="72">
         </div>
         <div class="hero__content">
           <h1 class="hero__headline">
@@ -88,7 +97,7 @@
       <div class="about__container">
         <h2 class="about__title">Strategic Positioning</h2>
         <p class="about__text">
-          Analyst with 4+ years experience designing risk detection, audit automation, 
+          Analyst with 5 years experience designing risk detection, audit automation, 
           and enforcement quality systems at scale within high-volume digital ecosystems. 
           Experienced in ambiguity, compliance-heavy environments, and building automated 
           integrity solutions supporting hundreds of users and millions of records.
