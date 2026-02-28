@@ -246,44 +246,6 @@
     <section id="contact" class="contact fade-in">
       <div class="contact__container">
         <h2 class="contact__title">Get In Touch</h2>
-        
-        <form name="contact" 
-              method="POST" 
-              data-netlify="true" 
-              netlify-honeypot="bot-field"
-              novalidate
-              class="contact-form">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="sr-only">
-            <label for="bot-field">Do not fill this out if you're human: </label>
-            <input id="bot-field" name="bot-field">
-          </p>
-          
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required aria-describedby="name-error">
-            <span id="name-error" class="form-error" role="alert" hidden></span>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required aria-describedby="email-error">
-            <span id="email-error" class="form-error" role="alert" hidden></span>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
-            <span id="message-error" class="form-error" role="alert" hidden></span>
-          </div>
-          
-          <button type="submit" class="cta-button cta-button--primary">Send Message</button>
-          <div class="form-error" id="form-global-error" role="alert" hidden></div>
-        </form>
-        
-        <div class="form-success" id="form-success-message" role="status" aria-live="polite" hidden>
-          Thank you! Your message has been sent successfully.
-        </div>
 
         <div class="contact-buttons">
           <a href="mailto:harikrishnanz98@gmail.com" class="cta-button cta-button--secondary">
