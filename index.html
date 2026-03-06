@@ -29,25 +29,44 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:wght@400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- Custom Cursor Glow -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
   <a href="#main-content" class="skip-to-main">Skip to main content</a>
 
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" id="navbar">
     <div class="nav__container">
-      <a href="#hero" class="nav__logo">Harikrishnan N</a>
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-bracket">&lt;</span>HN<span class="nav__logo-bracket">/&gt;</span>
+      </a>
       <span class="nav__role">Business / Quality / Data Analyst</span>
-      <ul class="nav__links">
-        <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#impact" class="nav__link">Impact</a></li>
-        <li><a href="#projects" class="nav__link">Projects</a></li>
-        <li><a href="#capabilities" class="nav__link">Capabilities</a></li>
-        <li><a href="#contact" class="nav__link">Contact</a></li>
+      <!-- Hamburger Menu -->
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about" class="nav__link" data-text="About">About</a></li>
+        <li><a href="#impact" class="nav__link" data-text="Impact">Impact</a></li>
+        <li><a href="#projects" class="nav__link" data-text="Projects">Projects</a></li>
+        <li><a href="#capabilities" class="nav__link" data-text="Capabilities">Capabilities</a></li>
+        <li><a href="#tech" class="nav__link" data-text="Tech">Tech</a></li>
+        <li><a href="#contact" class="nav__link" data-text="Contact">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -65,93 +84,132 @@
       </div>
       <div class="hero__container">
         <div class="hero__image">
+          <div class="hero__image-ring"></div>
           <img src="images/profile.jpg" 
                alt="Harikrishnan N - Trust & Safety Quality Analyst"
-               width="85" 
-               height="101">
+               width="120" 
+               height="120"
+               loading="eager">
         </div>
         <div class="hero__content">
+          <div class="hero__greeting">Hello, I'm</div>
           <h1 class="hero__headline">
-            Building Scalable Audit & Risk Intelligence Systems 
-            for High-Volume Content Ecosystems
+            <span class="hero__name">Harikrishnan N</span>
+            <span class="hero__typed-wrap">
+              <span class="hero__typed" id="typedText"></span>
+              <span class="hero__cursor" aria-hidden="true">|</span>
+            </span>
           </h1>
           <p class="hero__subheadline">
             Trust & Safety Quality Analyst | Automation Architect | 
             SQL & Python Systems Builder
           </p>
           <div class="hero__cta-group">
-            <a href="#projects" class="cta-button cta-button--primary">View My Work</a>
-            <a href="https://drive.google.com/uc?export=download&id=18M2rDcRZ4Ip2mimrMRF18A95GttEWL3R" target="_blank" rel="noopener" 
-               class="cta-button cta-button--secondary">Download Resume</a>
+            <a href="#projects" class="cta-button cta-button--primary magnetic-btn">
+              <span class="cta-button__icon">&#9881;</span> View My Work
+            </a>
+            <a href="https://drive.google.com/uc?export=download&id=18M2rDcRZ4Ip2mimrMRF18A95GttEWL3R" 
+               class="cta-button cta-button--secondary magnetic-btn" download>
+              <span class="cta-button__icon">&#8681;</span> Resume
+            </a>
             <a href="https://www.linkedin.com/in/harikriz" target="_blank" 
-               rel="noopener" class="cta-button cta-button--secondary">LinkedIn</a>
+               rel="noopener" class="cta-button cta-button--secondary magnetic-btn">
+              <span class="cta-button__icon">&#128279;</span> LinkedIn
+            </a>
             <a href="mailto:harikrishnanz98@gmail.com" 
-               class="cta-button cta-button--secondary">Email Me</a>
+               class="cta-button cta-button--secondary magnetic-btn">
+              <span class="cta-button__icon">&#9993;</span> Email
+            </a>
           </div>
         </div>
+      </div>
+      <!-- Scroll indicator -->
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <div class="hero__scroll-mouse">
+          <div class="hero__scroll-wheel"></div>
+        </div>
+        <span>Scroll Down</span>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about fade-in">
+    <section id="about" class="about section-reveal">
       <div class="about__container">
-        <h2 class="about__title">Strategic Positioning</h2>
+        <h2 class="about__title section-title">
+          <span class="section-title__decorator" aria-hidden="true">//</span>
+          Strategic Positioning
+        </h2>
         <p class="about__text">
-          Analyst with 5 years experience designing risk detection, audit automation, 
+          Analyst with <span class="highlight-text">5 years experience</span> designing risk detection, audit automation, 
           and enforcement quality systems at scale within high-volume digital ecosystems. 
-          Experienced in ambiguity, compliance-heavy environments, and building automated 
-          integrity solutions supporting hundreds of users and millions of records.
+          Experienced in ambiguity, compliance-heavy environments, and building 
+          <span class="highlight-text">automated integrity solutions</span> supporting hundreds of users and millions of records.
         </p>
       </div>
     </section>
 
     <!-- Impact & Metrics Section -->
-    <section id="impact" class="impact fade-in">
+    <section id="impact" class="impact section-reveal">
       <div class="impact__container">
-        <h2 class="impact__title">Quantified Impact</h2>
+        <h2 class="impact__title section-title">
+          <span class="section-title__decorator" aria-hidden="true">//</span>
+          Quantified Impact
+        </h2>
         <div class="stat-cards">
-          <div class="stat-card">
+          <div class="stat-card tilt-card" data-stagger="0">
+            <div class="stat-card__icon" aria-hidden="true">&#128187;</div>
             <div class="stat-card__value" data-target="3">0</div>
             <div class="stat-card__label">VBA macros deployed as BAU tools</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-card__value" data-target="50">0</div>
-            <div class="stat-card__label">+ employees using VBA automations</div>
+          <div class="stat-card tilt-card" data-stagger="1">
+            <div class="stat-card__icon" aria-hidden="true">&#128101;</div>
+            <div class="stat-card__value" data-target="50" data-suffix="+">0</div>
+            <div class="stat-card__label">employees using VBA automations</div>
           </div>
-          <div class="stat-card">
+          <div class="stat-card tilt-card" data-stagger="2">
+            <div class="stat-card__icon" aria-hidden="true">&#9201;</div>
             <div class="stat-card__value" data-target="10">0</div>
             <div class="stat-card__label">hours saved weekly from macro automation</div>
           </div>
-          <div class="stat-card">
+          <div class="stat-card tilt-card" data-stagger="3">
+            <div class="stat-card__icon" aria-hidden="true">&#128640;</div>
             <div class="stat-card__value" data-target="3">0</div>
             <div class="stat-card__label">Python applications running in production</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-card__value" data-target="250">0</div>
-            <div class="stat-card__label">+ global users across Python applications</div>
+          <div class="stat-card tilt-card" data-stagger="4">
+            <div class="stat-card__icon" aria-hidden="true">&#127760;</div>
+            <div class="stat-card__value" data-target="250" data-suffix="+">0</div>
+            <div class="stat-card__label">global users across Python applications</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-card__value" data-target="80">0</div>
-            <div class="stat-card__label">% manual touchpoint reduction in audit workflows</div>
+          <div class="stat-card tilt-card" data-stagger="5">
+            <div class="stat-card__icon" aria-hidden="true">&#128200;</div>
+            <div class="stat-card__value" data-target="80" data-suffix="%">0</div>
+            <div class="stat-card__label">manual touchpoint reduction in audit workflows</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-card__value" data-target="90">0</div>
-            <div class="stat-card__label">% improvement in data reliability</div>
+          <div class="stat-card tilt-card" data-stagger="6">
+            <div class="stat-card__icon" aria-hidden="true">&#9989;</div>
+            <div class="stat-card__value" data-target="90" data-suffix="%">0</div>
+            <div class="stat-card__label">improvement in data reliability</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-card__value" data-target="30">0</div>
-            <div class="stat-card__label">% increase in risk detection</div>
+          <div class="stat-card tilt-card" data-stagger="7">
+            <div class="stat-card__icon" aria-hidden="true">&#128269;</div>
+            <div class="stat-card__value" data-target="30" data-suffix="%">0</div>
+            <div class="stat-card__label">increase in risk detection</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects fade-in">
+    <section id="projects" class="projects section-reveal">
       <div class="projects__container">
-        <h2 class="projects__title">Systems Built</h2>
+        <h2 class="projects__title section-title">
+          <span class="section-title__decorator" aria-hidden="true">//</span>
+          Systems Built
+        </h2>
         <div class="project-cards">
-          <article class="project-card">
+          <article class="project-card tilt-card" data-stagger="0">
+            <div class="project-card__number" aria-hidden="true">01</div>
             <h3 class="project-card__title">Agent-Based Storefront Compliance Automation</h3>
             <div class="project-card__problem">
               <strong>Problem:</strong> Manual storefront audits were slow, inconsistent, 
@@ -171,7 +229,8 @@
             </p>
           </article>
 
-          <article class="project-card">
+          <article class="project-card tilt-card" data-stagger="1">
+            <div class="project-card__number" aria-hidden="true">02</div>
             <h3 class="project-card__title">Sampling & Enforcement Signal Optimization</h3>
             <div class="project-card__problem">
               <strong>Problem:</strong> Defect detection thresholds generated excessive 
@@ -188,7 +247,8 @@
             </p>
           </article>
 
-          <article class="project-card">
+          <article class="project-card tilt-card" data-stagger="2">
+            <div class="project-card__number" aria-hidden="true">03</div>
             <h3 class="project-card__title">Prime Video End-to-End Audit Orchestration Platform</h3>
             <div class="project-card__problem">
               <strong>Problem:</strong> Manual title auditing involved fragmented tools, high touchpoints, and long cycle times.
@@ -207,7 +267,8 @@
             </p>
           </article>
 
-          <article class="project-card">
+          <article class="project-card tilt-card" data-stagger="3">
+            <div class="project-card__number" aria-hidden="true">04</div>
             <h3 class="project-card__title">Dynamic Time & Motion Study Engine</h3>
             <div class="project-card__problem">
               <strong>Problem:</strong> Workflow teams lacked a dynamic way to measure step-level effort,
@@ -230,11 +291,15 @@
     </section>
 
     <!-- Capabilities Section -->
-    <section id="capabilities" class="capabilities fade-in">
+    <section id="capabilities" class="capabilities section-reveal">
       <div class="capabilities__container">
-        <h2 class="capabilities__title">Capability Architecture</h2>
+        <h2 class="capabilities__title section-title">
+          <span class="section-title__decorator" aria-hidden="true">//</span>
+          Capability Architecture
+        </h2>
         <div class="capability-groups">
-          <div class="capability-group">
+          <div class="capability-group tilt-card" data-stagger="0">
+            <div class="capability-group__icon" aria-hidden="true">&#128737;</div>
             <h3 class="capability-group__title">Trust & Safety Systems</h3>
             <ul class="capability-group__list">
               <li>End-to-End Audit Workflow Architecture</li>
@@ -245,7 +310,8 @@
             </ul>
           </div>
 
-          <div class="capability-group">
+          <div class="capability-group tilt-card" data-stagger="1">
+            <div class="capability-group__icon" aria-hidden="true">&#9881;</div>
             <h3 class="capability-group__title">Data & Automation</h3>
             <ul class="capability-group__list">
               <li>Python Flask Application Engineering</li>
@@ -257,7 +323,8 @@
             </ul>
           </div>
 
-          <div class="capability-group">
+          <div class="capability-group tilt-card" data-stagger="2">
+            <div class="capability-group__icon" aria-hidden="true">&#128161;</div>
             <h3 class="capability-group__title">Decision Intelligence</h3>
             <ul class="capability-group__list">
               <li>Live Admin Dashboards and Decision Support</li>
@@ -272,11 +339,14 @@
     </section>
 
     <!-- Technology Stack Section -->
-    <section id="tech" class="tech fade-in">
+    <section id="tech" class="tech section-reveal">
       <div class="tech__container">
-        <h2 class="tech__title">Tech Stack</h2>
+        <h2 class="tech__title section-title">
+          <span class="section-title__decorator" aria-hidden="true">//</span>
+          Tech Stack
+        </h2>
         <div class="tech-icons">
-          <div class="tech-icon">
+          <div class="tech-icon tilt-card" data-stagger="0">
             <img src="images/python-logo.png" alt="Python" class="tech-icon__image">
             <span class="tech-icon__label">Python</span>
             <ul class="tech-icon__uses">
@@ -286,7 +356,7 @@
               <li>Enabled reliability-focused workflow automation</li>
             </ul>
           </div>
-          <div class="tech-icon">
+          <div class="tech-icon tilt-card" data-stagger="1">
             <img src="images/sql-logo.png" alt="SQL" class="tech-icon__image">
             <span class="tech-icon__label">SQL</span>
             <ul class="tech-icon__uses">
@@ -296,7 +366,7 @@
               <li>Validated data quality across workflows</li>
             </ul>
           </div>
-          <div class="tech-icon">
+          <div class="tech-icon tilt-card" data-stagger="2">
             <img src="images/redshift-logo.png" alt="Amazon Redshift" class="tech-icon__image">
             <span class="tech-icon__label">Amazon Redshift</span>
             <ul class="tech-icon__uses">
@@ -305,7 +375,7 @@
               <li>Source layer for dashboards and insights</li>
             </ul>
           </div>
-          <div class="tech-icon">
+          <div class="tech-icon tilt-card" data-stagger="3">
             <img src="images/aws-logo.png" alt="AWS" class="tech-icon__image">
             <span class="tech-icon__label">AWS</span>
             <ul class="tech-icon__uses">
@@ -314,7 +384,7 @@
               <li>Maintained secure and scalable operations</li>
             </ul>
           </div>
-          <div class="tech-icon">
+          <div class="tech-icon tilt-card" data-stagger="4">
             <img src="images/quicksight-logo.png" alt="QuickSight" class="tech-icon__image">
             <span class="tech-icon__label">QuickSight</span>
             <ul class="tech-icon__uses">
@@ -323,7 +393,7 @@
               <li>Tracked volumes, quality, and SLA trends</li>
             </ul>
           </div>
-          <div class="tech-icon">
+          <div class="tech-icon tilt-card" data-stagger="5">
             <img src="images/excel-logo.png" alt="Excel" class="tech-icon__image">
             <span class="tech-icon__label">Excel</span>
             <ul class="tech-icon__uses">
@@ -332,7 +402,7 @@
               <li>Supported stakeholder-level reporting packs</li>
             </ul>
           </div>
-          <div class="tech-icon">
+          <div class="tech-icon tilt-card" data-stagger="6">
             <img src="images/vba-logo.png" alt="VBA" class="tech-icon__image">
             <span class="tech-icon__label">VBA</span>
             <ul class="tech-icon__uses">
@@ -346,31 +416,39 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact fade-in">
+    <section id="contact" class="contact section-reveal">
       <div class="contact__container">
-        <h2 class="contact__title">Get In Touch</h2>
-
+        <h2 class="contact__title section-title">
+          <span class="section-title__decorator" aria-hidden="true">//</span>
+          Get In Touch
+        </h2>
+        <p class="contact__subtitle">Have a project in mind or want to discuss opportunities? Let's connect.</p>
         <div class="contact-buttons">
-          <a href="mailto:harikrishnanz98@gmail.com" class="cta-button cta-button--secondary">
-            Email Me
+          <a href="mailto:harikrishnanz98@gmail.com" class="cta-button cta-button--secondary magnetic-btn">
+            <span class="cta-button__icon">&#9993;</span> Email Me
           </a>
-          <a href="tel:+919744754654" class="cta-button cta-button--secondary">
-            Call Me
+          <a href="tel:+919744754654" class="cta-button cta-button--secondary magnetic-btn">
+            <span class="cta-button__icon">&#128222;</span> Call Me
           </a>
           <a href="https://www.linkedin.com/in/harikriz" target="_blank" rel="noopener" 
-             class="cta-button cta-button--secondary">
-            LinkedIn
+             class="cta-button cta-button--secondary magnetic-btn">
+            <span class="cta-button__icon">&#128279;</span> LinkedIn
           </a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <span>&#8593;</span>
+  </button>
+
   <!-- Footer -->
   <footer id="footer" class="footer">
     <div class="footer__container">
       <p class="footer__copyright">
-        &copy; 2024 Harikrishnan N. All rights reserved.
+        &copy; 2025 Harikrishnan N. All rights reserved.
       </p>
       <div class="footer__social">
         <a href="https://www.linkedin.com/in/harikriz" target="_blank" rel="noopener" 
