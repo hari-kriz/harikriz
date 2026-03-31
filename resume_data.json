@@ -1,82 +1,122 @@
 {
   "name": "Harikrishnan N",
-  "title": "Business Analyst | Trust & Safety | Automation & Data Systems",
+  "title": "Trust & Safety Quality Analyst | Automation & Data Systems",
   "email": "harikrishnanz98@gmail.com",
   "phone": "+91 9744754654",
   "linkedin": "https://www.linkedin.com/in/harikriz",
   "website": "https://harikriz.netlify.app",
-  "summary": "Results-driven Business Analyst with 5+ years of experience building risk detection frameworks, audit automation platforms, and enforcement quality systems at scale. Proven ability to thrive in ambiguous, compliance-intensive environments, delivering automated integrity solutions adopted by 250+ users globally and processing millions of records with measurable gains in accuracy, efficiency, and risk coverage.",
+  "summary": "Analyst having 4+ years of experience driving risk detections, enforcement quality, and decision-making at scale in high volume content ecosystems. Proven ability to work under ambiguity, design automated integrity systems, and translate complex datasets into actionable insights. Strong background in SQL-based analytics, Python automation, and audit intelligence supporting millions of records and hundreds of users.",
   "skills": [
-    "Python",
-    "SQL",
-    "AWS (S3, Redshift, DynamoDB, CloudWatch)",
-    "Flask",
+    "Trust & Safety Analytics",
+    "Integrity & Enforcement Quality",
+    "Risk Detection",
+    "Audit Design",
+    "Compliance Validation",
+    "SQL (Advanced)",
+    "Amazon Redshift",
+    "Large-Scale Data Analysis",
+    "Python Automation",
+    "Agent-Based Systems",
+    "Root Cause Analysis",
+    "Stakeholder Decision Support",
     "VBA",
-    "ETL Pipeline Development",
-    "Risk Detection & Sampling Logic",
-    "Audit Automation",
-    "Data Analysis & Visualization",
-    "QuickSight Dashboarding",
-    "SAP",
     "Excel",
-    "Workflow Optimization",
-    "Stakeholder Management",
-    "Internal Tool Development",
-    "AHT Modeling & Bottleneck Analysis"
+    "AWS",
+    "ETL",
+    "Dashboarding & Self-Serve Analytics (Amazon QuickSight)"
   ],
   "experience": [
     {
-      "role": "Business Analyst",
-      "company": "Amazon Prime Video and Studios",
-      "location": "Bangalore",
-      "period": "May 2022 – Present",
-      "bullets": [
-        "Architected and deployed full-stack audit orchestration platform using Python, Flask, DynamoDB, and Redshift, now used by 200+ employees globally, saving 18 analyst-hours per day and reducing manual touchpoints from 30+ to 3.",
-        "Engineered Python-based agent automation system for storefront compliance audits, integrating playback simulation, screenshot capture, and Cloud OCR processing with automated pass/fail detection logic.",
-        "Redesigned SQL-based defect detection thresholds through historical pattern analysis, achieving 30% improvement in critical issue detection while reducing false positives in enforcement pipelines.",
-        "Conducted deep-dive analysis on defect data across workflows, identifying recurring risk patterns and developing targeted risk-based sampling logic to surface erroneous items from large data pools.",
-        "Built ETL pipelines to ingest and process audited data daily, creating a self-adjusting risk detection system with continuous feedback loop between audit outcomes and detection thresholds.",
-        "Designed and maintained standardized pipeline for model outputs per organizational requirements, owning critical datasets consumed by multiple analytical teams.",
-        "Resolved 100+ ad-hoc data requests from cross-functional stakeholders, delivering custom SQL queries, data extracts, and analytical summaries under tight deadlines.",
-        "Developed dynamic Time and Motion Study engine with step-wise time capture, automatic AHT calculation, bottleneck discovery, and optimal vs achievable target modeling.",
-        "Developed 3 VBA macros deployed as BAU tools across 50+ employees, saving approximately 10 hours per week and achieving 80% manual touchpoint reduction in audit workflows.",
-        "Built live admin dashboards using QuickSight, enabling self-serve workflow visibility and tracking volumes, quality, and SLA trends for leadership reviews."
+      "role": "Trust and Safety Quality Analyst",
+      "company": "Amazon Prime Video Trust and Safety",
+      "location": "Bengaluru, India",
+      "period": "June 2022 - Present",
+      "categories": [
+        {
+          "name": "Risk Detection, Audit Intelligence & Enforcement Quality",
+          "bullets": [
+            "Redesigned quality sampling and enforcement validation logic across 11 workflows, increasing detection of critical defects by 30% and strengthening audit confidence in high-volume review pipelines.",
+            "Conducted deep root-cause analyses on false-positive and false-negative enforcement signals, directly improving sampling accuracy and decision reliability.",
+            "Supported regulatory and compliance data requests across 3 global teams, ensuring accurate, traceable evidence under strict governance requirements."
+          ]
+        },
+        {
+          "name": "Agent-Based Automation & Compliance Systems",
+          "bullets": [
+            "Designed and built an end-to-end agent-based automation system to replace manual Walk the Store compliance audits on the Prime Video storefront.",
+            "Automated storefront navigation, title discovery, and playback simulation to detect on-screen maturity rating and content descriptor (MRN/CD) overlays in real time.",
+            "Implemented screenshot capture and cloud-based processing to convert visual compliance signals into structured text evidence.",
+            "Cross-validated extracted MRN/CD signals against internal audit systems to automatically determine pass/fail outcomes.",
+            "Flagged mismatches, missing signals, and incorrect ratings for targeted root-cause investigation, eliminating repetitive manual reviews and improving detection reliability.",
+            "Enabled auditors to focus on exception analysis and enforcement accuracy rather than routine navigation tasks."
+          ]
+        },
+        {
+          "name": "Analytics, Decision Support & Stakeholder Influence",
+          "bullets": [
+            "Built centralized, self-serve quality dashboards used by 20+ managers, reducing reporting overhead and enabling faster risk-based decision-making.",
+            "Partnered with global stakeholders to explain enforcement anomalies, performance trends, and audit outcomes using data-backed narratives.",
+            "Translated complex SQL analyses into executive-ready insights influencing prioritization of quality and integrity initiatives."
+          ]
+        },
+        {
+          "name": "Automation & Scalable Intelligence",
+          "bullets": [
+            "Developed Python-based analytics and monitoring tools used by 300+ employees, improving real-time visibility into data health and operational risks.",
+            "Automated detection of pipeline failures and data inconsistencies, saving approximately 2 analyst-hours daily and improving responsiveness.",
+            "Prototyped LLM-powered analytical tooling to generate Weekly Business Review insights directly from source tables, reducing dashboard dependency and accelerating leadership consumption of insights."
+          ]
+        }
       ]
     },
     {
       "role": "Catalog Specialist",
-      "company": "Amazon Prime Video and Studios",
-      "location": "Bangalore",
-      "period": "March 2022 – May 2022",
+      "company": "Amazon Prime Video Trust and Safety",
+      "location": "Bengaluru, India",
+      "period": "March 2022 - May 2022",
       "bullets": [
-        "Conducted content analysis and classification with 98% productivity while maintaining 100% quality standards.",
+        "Conducted content analysis and classification with 98% productivity keeping 100% quality.",
         "Managed sensitive corporate data in secure environment with strict governance protocols.",
         "Collaborated with 40+ team members on data collection, validation, and weekly reporting."
       ]
     },
     {
       "role": "Operational Assistant",
-      "company": "MRF Limited",
-      "location": "Agra",
-      "period": "January 2021 – March 2022",
+      "company": "MRF",
+      "location": "Agra, Uttar Pradesh",
+      "period": "January 2021 - March 2022",
       "bullets": [
-        "Generated daily Management Information Reports by compiling and analyzing large datasets for senior management decision-making.",
-        "Managed SAP-based operations including vendor liabilities, inventory tracking, sales analysis, and inter-office stock transfers.",
-        "Prepared and led TDS and TCS Returns, ensuring compliance with regulatory requirements."
+        "Produced daily MIS reports for senior leadership by analyzing operational, inventory, and sales datasets.",
+        "Managed SAP-based operations including vendor liabilities, inventory reconciliation, and stock transfer analysis.",
+        "Prepared statutory TDS and TCS returns, ensuring audit readiness and regulatory compliances."
       ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Agent-Based Storefront Compliance Automation",
+      "problem": "Manual storefront audits were slow, inconsistent, and prone to missed compliance gaps.",
+      "action": "Built a Python-based agent system to simulate human navigation, detect MR/CD overlays during playback, capture evidence, process it via cloud services, and validate signals against internal audit records.",
+      "impact": "Eliminated repetitive manual audits, improved reliability of storefront compliance validation, and enabled focused root-cause investigations."
+    },
+    {
+      "title": "Sampling & Enforcement Signal Optimization",
+      "problem": "Existing sampling logic under-detected high-risk defects.",
+      "action": "Redesigned SQL-based detection thresholds using historical defect analysis.",
+      "impact": "Increased critical issue detection by 30%, strengthening enforcement confidence."
     }
   ],
   "education": [
     {
       "degree": "Bachelor of Commerce",
       "institution": "Kerala University, S.D College",
-      "period": "2016 – 2019",
+      "period": "2016 - 2019",
       "grade": "CGPA: 7.1/10"
     },
     {
       "degree": "Tally and MS Office Certification",
       "institution": "ICMAI Chapters Institution",
-      "period": "2019 – 2020",
+      "period": "2019 - 2020",
       "grade": "Grade: A"
     }
   ]
