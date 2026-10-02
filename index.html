@@ -1,748 +1,508 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary Meta Tags -->
-  <title>Harikrishnan N - Trust & Safety Quality Analyst | Audit Automation Expert</title>
-  <meta name="title" content="Harikrishnan N - Trust & Safety Quality Analyst">
-  <meta name="description" content="Trust & Safety Quality Analyst with 5 years experience in audit automation, risk detection, and enforcement quality systems at Amazon Prime Video. Specializing in SQL, Python, and scalable integrity solutions.">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://harikriz.netlify.app/">
-  <meta property="og:title" content="Harikrishnan N - Trust & Safety Quality Analyst">
-  <meta property="og:description" content="Building scalable audit & risk intelligence systems for high-volume content ecosystems">
+  <title>Harikrishnan N - Sr. Business Analyst | Amazon Prime Video</title>
+  <meta name="description" content="Sr. Business Analyst at Amazon Prime Video with 6 years experience building internal tools, GenAI chatbots, audit automation platforms and BI dashboards used by 250+ employees globally.">
+  <meta property="og:title" content="Harikrishnan N - Sr. Business Analyst | Amazon Prime Video">
+  <meta property="og:description" content="I build tools and systems that 250+ people use every day. Sentinel, GenAI chatbots, BI dashboards. Open to BIE roles.">
   <meta property="og:image" content="https://harikriz.netlify.app/images/profile.jpg">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://harikriz.netlify.app/">
-  <meta property="twitter:title" content="Harikrishnan N - Trust & Safety Quality Analyst">
-  <meta property="twitter:description" content="Building scalable audit & risk intelligence systems">
-  <meta property="twitter:image" content="https://harikriz.netlify.app/images/profile.jpg">
-  
-  <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="R8Ux_fTHHuIgfNtx9JZ1mv4PHQBQAOeMeu85ZJoLAWw">
-
-  <!-- Canonical URL -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="canonical" href="https://harikriz.netlify.app/">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Harikrishnan N",
     "url": "https://harikriz.netlify.app",
-    "jobTitle": "Trust & Safety Quality Analyst",
-    "description": "Results-driven analyst with 5+ years of experience building risk detection frameworks, audit automation platforms, and enforcement quality systems at scale.",
-    "sameAs": [
-      "https://www.linkedin.com/in/harikriz"
-    ],
-    "knowsAbout": ["Risk Detection", "Audit Automation", "SQL", "Python", "Trust & Safety", "Quality Assurance", "Data Analysis", "Enforcement Systems"],
+    "jobTitle": "Sr. Business Analyst",
+    "worksFor": { "@type": "Organization", "name": "Amazon Prime Video" },
+    "description": "Sr. Business Analyst building internal tools, GenAI solutions, and BI dashboards used by 250+ employees at Amazon Prime Video.",
+    "sameAs": ["https://www.linkedin.com/in/harikriz"],
     "image": "https://harikriz.netlify.app/images/profile.jpg"
   }
   </script>
-  
-  <!-- Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Open+Sans:wght@400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <!-- Scroll Progress Bar -->
+
   <div class="scroll-progress" aria-hidden="true"></div>
-
-  <!-- Particle Canvas -->
   <canvas id="particles" aria-hidden="true"></canvas>
-
-  <!-- Custom Cursor Glow -->
   <div class="cursor-glow" aria-hidden="true"></div>
 
-  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+  <div class="layout">
 
-  <!-- Navigation -->
-  <nav class="nav" id="navbar">
-    <div class="nav__container">
-      <a href="#hero" class="nav__logo">
-        <span class="nav__logo-bracket">&lt;</span>HN<span class="nav__logo-bracket">/&gt;</span>
-      </a>
-      <span class="nav__role">Business / Quality / Data Analyst</span>
-      <!-- Hamburger Menu -->
-      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="nav__hamburger-line"></span>
-        <span class="nav__hamburger-line"></span>
-        <span class="nav__hamburger-line"></span>
-      </button>
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar">
 
-      <ul class="nav__links" id="navLinks">
-        <li><a href="#about" class="nav__link" data-text="About">About</a></li>
-        <li><a href="#impact" class="nav__link" data-text="Impact">Impact</a></li>
-        <li><a href="#projects" class="nav__link" data-text="Projects">Projects</a></li>
-        <li><a href="#capabilities" class="nav__link" data-text="Capabilities">Capabilities</a></li>
-        <li><a href="#tech" class="nav__link" data-text="Tech">Tech</a></li>
-        <li><a href="#contact" class="nav__link" data-text="Contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main id="main-content">
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="hero__code-bg" aria-hidden="true">
-        <span class="code-line">SELECT risk_bucket, COUNT(*) FROM enforcement_events GROUP BY risk_bucket ORDER BY COUNT(*) DESC;</span>
-        <span class="code-line">WITH defects AS (SELECT * FROM qa_signals WHERE severity = 'critical') SELECT owner, AVG(score) FROM defects GROUP BY owner;</span>
-        <span class="code-line">python audit_agent.py --source redshift --ocr cloudvision --mode enforcement_validation</span>
-        <span class="code-line">df.groupby('region')['defect_rate'].rolling(7).mean().reset_index()</span>
-        <span class="code-line">UPDATE quality_metrics SET trend = 'improving' WHERE detection_gain &gt;= 0.30;</span>
-        <span class="code-line">for batch in stream: anomalies.extend(model.detect(batch)); alert(anomalies)</span>
-      </div>
-      <div class="hero__container">
-        <div class="hero__image">
-          <div class="hero__image-ring"></div>
-          <img src="images/profile.jpg" 
-               alt="Harikrishnan N - Trust & Safety Quality Analyst"
-               width="120" 
-               height="120"
-               loading="eager">
+      <!-- Profile -->
+      <div class="profile">
+        <div class="profile__img-wrap">
+          <div class="profile__ring"></div>
+          <img src="images/profile.jpg" alt="Harikrishnan N" class="profile__img" width="80" height="80">
         </div>
-        <div class="hero__content">
-          <div class="hero__greeting">Hello, I'm</div>
-          <h1 class="hero__headline">
-            <span class="hero__name">Harikrishnan N</span>
-            <span class="hero__typed-wrap">
-              <span class="hero__typed" id="typedText"></span>
-              <span class="hero__cursor" aria-hidden="true">|</span>
-            </span>
-          </h1>
-          <p class="hero__subheadline">
-            Trust & Safety Quality Analyst | Automation Architect | 
-            SQL & Python Systems Builder
-          </p>
-          <div class="hero__cta-group">
-            <a href="#projects" class="cta-button cta-button--primary magnetic-btn">
-              <span class="cta-button__icon">&#9881;</span> View My Work
-            </a>
-            <button type="button" id="openResumeBtn" class="cta-button cta-button--secondary magnetic-btn">
-              <span class="cta-button__icon">&#128196;</span> Resume
-            </button>
-            <a href="https://www.linkedin.com/in/harikriz" target="_blank" 
-               rel="noopener" class="cta-button cta-button--secondary magnetic-btn">
-              <span class="cta-button__icon">&#128279;</span> LinkedIn
-            </a>
-            <a href="mailto:harikrishnanz98@gmail.com" 
-               class="cta-button cta-button--secondary magnetic-btn">
-              <span class="cta-button__icon">&#9993;</span> Email
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Scroll indicator -->
-      <div class="hero__scroll-indicator" aria-hidden="true">
-        <div class="hero__scroll-mouse">
-          <div class="hero__scroll-wheel"></div>
-        </div>
-        <span>Scroll Down</span>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about section-reveal">
-      <div class="about__container">
-        <h2 class="about__title section-title">
-          <span class="section-title__decorator" aria-hidden="true">//</span>
-          Strategic Positioning
-        </h2>
-        <p class="about__text">
-          Results-driven analyst with <span class="highlight-text">4+ years of experience</span> in trust &amp; safety, risk detection, 
-          and enforcement quality across high-volume content ecosystems. Skilled at designing 
-          <span class="highlight-text">automated integrity systems</span>, building audit intelligence platforms, and translating 
-          complex datasets into actionable insights that drive decision-making at scale. Strong background 
-          in SQL-based analytics, Python automation, and scalable tooling adopted by hundreds of users 
-          globally, processing millions of records with measurable gains in accuracy, efficiency, and risk coverage.
+        <h1 class="profile__name">Harikrishnan N</h1>
+        <p class="profile__title">Sr. Business Analyst</p>
+        <p class="profile__company">Amazon Prime Video · Trust &amp; Safety · Bengaluru</p>
+        <p class="profile__tagline">
+          I build tools and systems that <span>250+ people</span> depend on every day -
+          from <span>GenAI chatbots</span> to full audit platforms.
+          Looking for <span>BIE roles</span> globally.
         </p>
       </div>
-    </section>
 
-    <!-- Impact & Metrics Section -->
-    <section id="impact" class="impact section-reveal">
-      <div class="impact__container">
-        <h2 class="impact__title section-title">
-          <span class="section-title__decorator" aria-hidden="true">//</span>
-          Quantified Impact
-        </h2>
-        <div class="stat-cards">
-          <div class="stat-card tilt-card" data-stagger="0">
-            <div class="stat-card__icon" aria-hidden="true">&#128187;</div>
-            <div class="stat-card__value" data-target="3">0</div>
-            <div class="stat-card__label">VBA macros deployed as BAU tools</div>
-          </div>
-          <div class="stat-card tilt-card" data-stagger="1">
-            <div class="stat-card__icon" aria-hidden="true">&#128101;</div>
-            <div class="stat-card__value" data-target="50" data-suffix="+">0</div>
-            <div class="stat-card__label">employees using VBA automations</div>
-          </div>
-          <div class="stat-card tilt-card" data-stagger="2">
-            <div class="stat-card__icon" aria-hidden="true">&#9201;</div>
-            <div class="stat-card__value" data-target="10">0</div>
-            <div class="stat-card__label">hours saved weekly from macro automation</div>
-          </div>
-          <div class="stat-card tilt-card" data-stagger="3">
-            <div class="stat-card__icon" aria-hidden="true">&#128640;</div>
-            <div class="stat-card__value" data-target="3">0</div>
-            <div class="stat-card__label">Python applications running in production</div>
-          </div>
-          <div class="stat-card tilt-card" data-stagger="4">
-            <div class="stat-card__icon" aria-hidden="true">&#127760;</div>
-            <div class="stat-card__value" data-target="250" data-suffix="+">0</div>
-            <div class="stat-card__label">global users across Python applications</div>
-          </div>
-          <div class="stat-card tilt-card" data-stagger="5">
-            <div class="stat-card__icon" aria-hidden="true">&#128200;</div>
-            <div class="stat-card__value" data-target="80" data-suffix="%">0</div>
-            <div class="stat-card__label">manual touchpoint reduction in audit workflows</div>
-          </div>
-          <div class="stat-card tilt-card" data-stagger="6">
-            <div class="stat-card__icon" aria-hidden="true">&#9989;</div>
-            <div class="stat-card__value" data-target="90" data-suffix="%">0</div>
-            <div class="stat-card__label">improvement in data reliability</div>
-          </div>
-          <div class="stat-card tilt-card" data-stagger="7">
-            <div class="stat-card__icon" aria-hidden="true">&#128269;</div>
-            <div class="stat-card__value" data-target="30" data-suffix="%">0</div>
-            <div class="stat-card__label">increase in risk detection</div>
-          </div>
+      <!-- Mini Stats -->
+      <div class="mini-stats">
+        <div class="mini-stat">
+          <div class="mini-stat__value">250+</div>
+          <div class="mini-stat__label">Daily users on Sentinel</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-stat__value">18h</div>
+          <div class="mini-stat__label">Saved per day</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-stat__value">6yr</div>
+          <div class="mini-stat__label">Total experience</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-stat__value">10+</div>
+          <div class="mini-stat__label">Workflows automated</div>
         </div>
       </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects section-reveal">
-      <div class="projects__container">
-        <h2 class="projects__title section-title">
-          <span class="section-title__decorator" aria-hidden="true">//</span>
-          Systems Built
-        </h2>
-        <div class="project-cards">
-          <article class="project-card tilt-card" data-stagger="0">
-            <div class="project-card__number" aria-hidden="true">01</div>
-            <h3 class="project-card__title">Agent-Based Storefront Compliance Automation</h3>
-            <div class="project-card__problem">
-              <strong>Problem:</strong> Manual storefront audits were slow, inconsistent, 
-              and prone to missed compliance gaps.
-            </div>
-            <ul class="project-card__features">
-              <li>Python-based agent navigation</li>
-              <li>Playback simulation</li>
-              <li>Screenshot capture</li>
-              <li>Cloud OCR processing</li>
-              <li>Automated MRN/CD validation</li>
-              <li>Pass/fail detection logic</li>
-            </ul>
-            <p class="project-card__impact">
-              <strong>Impact:</strong> Eliminated repetitive manual audits and increased 
-              signal reliability across compliance workflows.
-            </p>
-          </article>
+      <!-- Nav -->
+      <nav class="sidebar-nav" aria-label="Page sections">
+        <a href="#about"        class="sidebar-nav__link active"><span class="sidebar-nav__dot"></span>About</a>
+        <a href="#projects"     class="sidebar-nav__link"><span class="sidebar-nav__dot"></span>Projects</a>
+        <a href="#experience"   class="sidebar-nav__link"><span class="sidebar-nav__dot"></span>Experience</a>
+        <a href="#skills"       class="sidebar-nav__link"><span class="sidebar-nav__dot"></span>Skills</a>
+        <a href="#tech"         class="sidebar-nav__link"><span class="sidebar-nav__dot"></span>Tech Stack</a>
+      </nav>
 
-          <article class="project-card tilt-card" data-stagger="1">
-            <div class="project-card__number" aria-hidden="true">02</div>
-            <h3 class="project-card__title">Sampling & Enforcement Signal Optimization</h3>
-            <div class="project-card__problem">
-              <strong>Problem:</strong> Defect detection thresholds generated excessive 
-              false positives and missed critical issues.
-            </div>
-            <ul class="project-card__features">
-              <li>SQL redesign of defect detection thresholds</li>
-              <li>Historical defect pattern analysis</li>
-              <li>False positive/false negative reduction</li>
-            </ul>
-            <p class="project-card__impact">
-              <strong>Impact:</strong> 30% improvement in critical issue detection while 
-              reducing noise in enforcement pipelines.
-            </p>
-          </article>
-
-          <article class="project-card tilt-card" data-stagger="2">
-            <div class="project-card__number" aria-hidden="true">03</div>
-            <h3 class="project-card__title">Prime Video End-to-End Audit Orchestration Platform</h3>
-            <div class="project-card__problem">
-              <strong>Problem:</strong> Manual title auditing involved fragmented tools, high touchpoints, and long cycle times.
-            </div>
-            <ul class="project-card__features">
-              <li>Python + Flask + HTML platform with DynamoDB and Redshift data pipeline</li>
-              <li>Title ingestion, smart allocation, prioritization, and queue engine</li>
-              <li>Blind audit workflow and automated comparison engine</li>
-              <li>Auto email alerts and automated title reassignment workflows</li>
-              <li>CloudWatch metrics integration and live admin dashboarding</li>
-              <li>Super-user controls to manage rule changes without code edits</li>
-            </ul>
-            <p class="project-card__impact">
-              <strong>Impact:</strong> Now used by 200+ employees globally, saves 18 analyst-hours per day,
-              and reduced manual touchpoints from 30+ to 3.
-            </p>
-          </article>
-
-          <article class="project-card tilt-card" data-stagger="3">
-            <div class="project-card__number" aria-hidden="true">04</div>
-            <h3 class="project-card__title">Defect Deep-Dive & Risk-Based Sampling Framework</h3>
-            <div class="project-card__problem">
-              <strong>Problem:</strong> Existing sampling methods lacked precision, pulling random items 
-              instead of targeting high-risk ones — leading to missed defects and wasted audit effort.
-            </div>
-            <ul class="project-card__features">
-              <li>Deep-dive analysis on defect data across specific workflows</li>
-              <li>Identified recurring risk patterns and error clusters</li>
-              <li>Developed targeted sampling logic to surface erroneous items from large pools</li>
-              <li>Improved defect catch rate while reducing audit noise</li>
-            </ul>
-            <p class="project-card__impact">
-              <strong>Impact:</strong> Shifted sampling from random to risk-driven, significantly 
-              improving detection accuracy and audit ROI.
-            </p>
-          </article>
-
-          <article class="project-card tilt-card" data-stagger="4">
-            <div class="project-card__number" aria-hidden="true">05</div>
-            <h3 class="project-card__title">Dynamic Risk Detection via ETL Pipelines</h3>
-            <div class="project-card__problem">
-              <strong>Problem:</strong> Risk signals were static and couldn't adapt to evolving 
-              defect patterns, causing detection gaps over time.
-            </div>
-            <ul class="project-card__features">
-              <li>Built ETL pipelines to ingest and process audited data daily</li>
-              <li>SQL-driven mechanism to auto-update risk signals in sampling logic</li>
-              <li>Continuous feedback loop between audit outcomes and detection thresholds</li>
-              <li>Self-adjusting system requiring minimal manual intervention</li>
-            </ul>
-            <p class="project-card__impact">
-              <strong>Impact:</strong> Created a living risk detection system that adapts daily, 
-              keeping sampling logic aligned with the latest defect trends.
-            </p>
-          </article>
-
-          <article class="project-card tilt-card" data-stagger="5">
-            <div class="project-card__number" aria-hidden="true">06</div>
-            <h3 class="project-card__title">Model Output Pipeline & Dataset Ownership</h3>
-            <div class="project-card__problem">
-              <strong>Problem:</strong> Model outputs lacked a standardized pipeline, and critical 
-              datasets had no clear ownership — causing delays and data inconsistencies across teams.
-            </div>
-            <ul class="project-card__features">
-              <li>Designed and built the pipeline for model outputs per organizational requirements</li>
-              <li>Owned and maintained datasets consumed by multiple analytical teams</li>
-              <li>Ensured data quality, freshness, and documentation standards</li>
-              <li>Served as the single point of contact for dataset-related queries</li>
-            </ul>
-            <p class="project-card__impact">
-              <strong>Impact:</strong> Enabled reliable, self-serve data access for cross-functional 
-              teams and eliminated recurring data quality escalations.
-            </p>
-          </article>
-
-          <article class="project-card tilt-card" data-stagger="6">
-            <div class="project-card__number" aria-hidden="true">07</div>
-            <h3 class="project-card__title">Stakeholder Ad-Hoc Analytics & Data Support</h3>
-            <div class="project-card__problem">
-              <strong>Problem:</strong> Multiple stakeholders needed quick, accurate data pulls 
-              and analytical insights with fast turnaround — often under tight deadlines.
-            </div>
-            <ul class="project-card__features">
-              <li>Resolved 100+ ad-hoc data requests from cross-functional stakeholders</li>
-              <li>Delivered custom SQL queries, data extracts, and analytical summaries</li>
-              <li>Prioritized requests based on business urgency and impact</li>
-              <li>Built reusable query templates to accelerate recurring request types</li>
-            </ul>
-            <p class="project-card__impact">
-              <strong>Impact:</strong> Became a trusted data partner across teams, consistently 
-              delivering accurate insights that informed operational and strategic decisions.
-            </p>
-          </article>
-
-          <article class="project-card tilt-card" data-stagger="7">
-            <div class="project-card__number" aria-hidden="true">08</div>
-            <h3 class="project-card__title">Dynamic Time & Motion Study Engine</h3>
-            <div class="project-card__problem">
-              <strong>Problem:</strong> Workflow teams lacked a dynamic way to measure step-level effort,
-              pinpoint bottlenecks, and set realistic weekly targets.
-            </div>
-            <ul class="project-card__features">
-              <li>In-app dynamic step builder to add and remove workflow steps</li>
-              <li>Step-wise time capture and sequence tracking for each run</li>
-              <li>Dynamic email routing to configured recipients per user/workflow</li>
-              <li>Automatic AHT calculation and workflow-level rollups</li>
-              <li>Bottleneck discovery with optimal vs achievable target modeling</li>
-            </ul>
-            <p class="project-card__impact">
-              <strong>Impact:</strong> Helped teams identify automation candidates faster,
-              standardize performance baselines, and set practical weekly output targets.
-            </p>
-          </article>
-        </div>
+      <!-- CTAs -->
+      <div class="sidebar-ctas">
+        <button type="button" id="openResumeBtn" class="btn btn--primary">&#128196; View Resume</button>
+        <a href="https://www.linkedin.com/in/harikriz" target="_blank" rel="noopener" class="btn btn--ghost">&#128279; LinkedIn</a>
       </div>
-    </section>
 
-    <!-- Capabilities Section -->
-    <section id="capabilities" class="capabilities section-reveal">
-      <div class="capabilities__container">
-        <h2 class="capabilities__title section-title">
-          <span class="section-title__decorator" aria-hidden="true">//</span>
-          Capability Architecture
-        </h2>
-        <div class="capability-groups">
-          <div class="capability-group tilt-card" data-stagger="0">
-            <div class="capability-group__icon" aria-hidden="true">&#128737;</div>
-            <h3 class="capability-group__title">Trust & Safety Systems</h3>
-            <ul class="capability-group__list">
-              <li>End-to-End Audit Workflow Architecture</li>
-              <li>Blind Audit and Comparison Engine Design</li>
-              <li>Queue, Allocation, and Prioritization Strategy</li>
-              <li>Enforcement Validation and Compliance Controls</li>
-              <li>Risk Detection Uplift Across High-Volume Pipelines</li>
-            </ul>
-          </div>
-
-          <div class="capability-group tilt-card" data-stagger="1">
-            <div class="capability-group__icon" aria-hidden="true">&#9881;</div>
-            <h3 class="capability-group__title">Data & Automation</h3>
-            <ul class="capability-group__list">
-              <li>Python Flask Application Engineering</li>
-              <li>DynamoDB to Redshift Data Write Pipelines</li>
-              <li>VBA BAU Automation for Repetitive Operations</li>
-              <li>Automated Reassignment and Notification Logic</li>
-              <li>CloudWatch Metrics and Operational Monitoring</li>
-              <li>Dynamic Time & Motion Instrumentation</li>
-            </ul>
-          </div>
-
-          <div class="capability-group tilt-card" data-stagger="2">
-            <div class="capability-group__icon" aria-hidden="true">&#128161;</div>
-            <h3 class="capability-group__title">Decision Intelligence</h3>
-            <ul class="capability-group__list">
-              <li>Live Admin Dashboards and Decision Support</li>
-              <li>Root-Cause Analysis for Quality Escalations</li>
-              <li>AHT Modeling and Workflow Bottleneck Detection</li>
-              <li>Super-User Governance Without Code Changes</li>
-              <li>Target Setting: Optimal vs Achievable Throughput</li>
-            </ul>
-          </div>
-
-          <div class="capability-group tilt-card" data-stagger="3">
-            <div class="capability-group__icon" aria-hidden="true">&#128202;</div>
-            <h3 class="capability-group__title">Analytics & Data</h3>
-            <ul class="capability-group__list">
-              <li>Defect Deep-Dive Analysis and Risk Pattern Identification</li>
-              <li>Risk-Based Sampling Logic Design</li>
-              <li>ETL Pipeline Development for Dynamic Risk Signals</li>
-              <li>Dataset Ownership and Cross-Team Data Governance</li>
-              <li>Ad-Hoc Stakeholder Analytics (100+ Requests Resolved)</li>
-              <li>Model Output Pipeline Engineering</li>
-            </ul>
-          </div>
-        </div>
+      <!-- Contact -->
+      <div class="contact-links">
+        <a href="mailto:harikrishnanz98@gmail.com" class="contact-link">
+          <span class="contact-link__icon">&#9993;</span> harikrishnanz98@gmail.com
+        </a>
+        <a href="tel:+919744754654" class="contact-link">
+          <span class="contact-link__icon">&#128222;</span> +91 9744 754 654
+        </a>
+        <a href="https://www.linkedin.com/in/harikriz" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link__icon">&#128279;</span> linkedin.com/in/harikriz
+        </a>
       </div>
-    </section>
 
-    <!-- Technology Stack Section -->
-    <section id="tech" class="tech section-reveal">
-      <div class="tech__container">
-        <h2 class="tech__title section-title">
-          <span class="section-title__decorator" aria-hidden="true">//</span>
-          Tech Stack
-        </h2>
-        <div class="tech-icons">
-          <div class="tech-icon tilt-card" data-stagger="0">
-            <img src="images/python-logo.png" alt="Python" class="tech-icon__image">
-            <span class="tech-icon__label">Python</span>
-            <ul class="tech-icon__uses">
-              <li>Built 3 production audit applications</li>
-              <li>Implemented comparison and routing engines</li>
-              <li>Automated notifications and reassignments</li>
-              <li>Enabled reliability-focused workflow automation</li>
-            </ul>
+    </aside>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main class="content">
+
+      <!-- ABOUT -->
+      <section id="about">
+        <p class="section__label">// About</p>
+        <div class="about-text">
+          <p>
+            I'm a <strong>Sr. Business Analyst at Amazon Prime Video</strong>, Bengaluru, with
+            <strong>6 years of professional experience</strong> - 4.6 at Amazon in Trust &amp; Safety,
+            and 1.4 at MRF Ltd as an Operational Assistant.
+          </p>
+          <p>
+            My work sits where data engineering, product thinking and business intelligence overlap.
+            I don't just analyse problems - I build the tools that fix them permanently.
+            The clearest example is <span class="hl-blue">Sentinel</span>, an end-to-end audit platform I designed solo
+            that replaced a fragmented chaos of Excel sheets, Quip docs and SharePoints across
+            <strong>10+ workflows</strong>. Today 250+ colleagues use it daily without thinking about it - which is exactly the point.
+          </p>
+          <p>
+            More recently I've built a <span class="hl-green">GenAI chatbot on AWS Bedrock</span> that lets
+            non-technical teams query T&amp;S datasets in plain English, a model accuracy measurement
+            framework now used by Ops, Science and Tech teams, and Spark/Redshift ETL pipelines for
+            dynamic risk detection. I'm actively looking for <span class="hl-blue">BIE roles</span> where
+            I can automate the painful, measure the important, and put the right data in front of
+            the right people at the right time.
+          </p>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <p class="section__label">// What I've Built</p>
+        <div class="bento">
+
+          <!-- Featured: Sentinel -->
+          <div class="bento-card bento-card--featured">
+            <div class="bento-card__num">01 · FLAGSHIP PROJECT</div>
+            <div class="bento-card__title">Sentinel - End-to-End Audit Orchestration Platform</div>
+            <div class="bento-card__desc">
+              <strong style="color:#e8eaf6">Before:</strong> 10+ workflows ran across a patchwork of offline Excel, Quip docs and SharePoints.
+              SMEs manually allocated titles, operators typed results back, everything was recompiled by hand, uploaded to Apollo,
+              and the whole cycle repeated for audits. Every error triggered someone manually typing a SIM ticket.
+              <br><br>
+              <strong style="color:#e8eaf6">Built:</strong> Smart queue with live title reallocation · blind review + audit with auto comparison engine ·
+              auto SIM/issue creation · direct Redshift sync (no Apollo) · Slack + email SLA alerts ·
+              priority queue mechanics · dynamic admin-configurable forms per workflow - no code changes needed ·
+              AHT &amp; SLA calculations in manager view · 10+ workflows onboarded.
+            </div>
+            <div class="bento-card__impact">⚡ 250+ daily users · 18 analyst-hours saved per day · 30+ manual touchpoints → 3</div>
+            <div class="bento-card__tags">
+              <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">DynamoDB</span>
+              <span class="tag">Redshift</span><span class="tag">Lambda</span><span class="tag tag--green">Production</span>
+            </div>
           </div>
-          <div class="tech-icon tilt-card" data-stagger="1">
-            <img src="images/sql-logo.png" alt="SQL" class="tech-icon__image">
-            <span class="tech-icon__label">SQL</span>
-            <ul class="tech-icon__uses">
-              <li>Redesigned sampling and detection thresholds</li>
-              <li>Performed defect and trend analysis at scale</li>
-              <li>Built performance and AHT reporting queries</li>
-              <li>Validated data quality across workflows</li>
-            </ul>
+
+          <!-- GenAI Chatbot -->
+          <div class="bento-card">
+            <div class="bento-card__num">02</div>
+            <div class="bento-card__title">GenAI Chatbot for T&amp;S Data Queries</div>
+            <div class="bento-card__desc">
+              Trained an AWS Bedrock model on T&amp;S datasets, schema, sample queries and join patterns.
+              Ingested data lake to S3 via Airflow DAGs. Outputs: natural language answer + SQL query + downloadable CSV.
+              Queries execute via Athena in real time. Non-technical teams now self-serve data questions instantly.
+            </div>
+            <div class="bento-card__impact">✦ Eliminated ad-hoc analyst bottleneck for data queries</div>
+            <div class="bento-card__tags">
+              <span class="tag">AWS Bedrock</span><span class="tag">Athena</span>
+              <span class="tag">Airflow</span><span class="tag tag--green">GenAI</span>
+            </div>
           </div>
-          <div class="tech-icon tilt-card" data-stagger="2">
-            <img src="images/redshift-logo.png" alt="Amazon Redshift" class="tech-icon__image">
-            <span class="tech-icon__label">Amazon Redshift</span>
-            <ul class="tech-icon__uses">
-              <li>Final warehouse destination for audit outputs</li>
-              <li>Historical analytics for quality leadership reviews</li>
-              <li>Source layer for dashboards and insights</li>
-            </ul>
+
+          <!-- Model Accuracy Dashboard -->
+          <div class="bento-card">
+            <div class="bento-card__num">03</div>
+            <div class="bento-card__title">Model Accuracy Measurement Framework</div>
+            <div class="bento-card__desc">
+              New ML model auto-generating content maturity ratings had no accuracy standard.
+              Designed a statistical extrapolation method - scale audit defects to full ops volume.
+              Built central QuickSight dashboard: MR accuracy, CD accuracy, title accuracy, automation rate,
+              over-prediction analysis, accuracy trends - filterable by year/quarter/month/week.
+            </div>
+            <div class="bento-card__impact">✦ Used by Ops, Science &amp; Tech as single source of truth</div>
+            <div class="bento-card__tags">
+              <span class="tag">QuickSight</span><span class="tag">SQL</span>
+              <span class="tag">Statistics</span><span class="tag tag--green">Cross-team</span>
+            </div>
           </div>
-          <div class="tech-icon tilt-card" data-stagger="3">
-            <img src="images/dynamodb-logo.jpg" alt="DynamoDB" class="tech-icon__image">
-            <span class="tech-icon__label">DynamoDB</span>
-            <ul class="tech-icon__uses">
-              <li>Primary data store for audit orchestration platform</li>
-              <li>Real-time read/write for allocation and queue engines</li>
-              <li>Supported 200+ users globally with low-latency access</li>
-            </ul>
+
+          <!-- Storefront Compliance -->
+          <div class="bento-card">
+            <div class="bento-card__num">04</div>
+            <div class="bento-card__title">Storefront Compliance Automation</div>
+            <div class="bento-card__desc">
+              Python agent simulates storefront navigation and title playback. Screenshot capture + cloud OCR
+              extracts on-screen maturity ratings as structured text. Auto cross-validates against audit records.
+              Pass/fail detection with mismatch flagging for root-cause review.
+            </div>
+            <div class="bento-card__impact">✦ Replaced 100% manual compliance walks</div>
+            <div class="bento-card__tags">
+              <span class="tag">Python</span><span class="tag">OCR</span><span class="tag">Automation</span>
+            </div>
           </div>
-          <div class="tech-icon tilt-card" data-stagger="4">
-            <img src="images/lambda-logo.png" alt="AWS Lambda" class="tech-icon__image">
-            <span class="tech-icon__label">AWS Lambda</span>
-            <ul class="tech-icon__uses">
-              <li>Serverless execution for event-driven automation</li>
-              <li>Triggered ETL and notification workflows</li>
-              <li>Reduced infrastructure overhead for batch processing</li>
-            </ul>
+
+          <!-- ETL Risk Detection -->
+          <div class="bento-card">
+            <div class="bento-card__num">05</div>
+            <div class="bento-card__title">Dynamic Risk Detection via ETL Pipelines</div>
+            <div class="bento-card__desc">
+              Static risk signals couldn't adapt to evolving defect patterns.
+              Built daily Spark + Redshift ETL pipelines with a continuous feedback loop -
+              audit outcomes auto-update detection thresholds. Self-adjusting, minimal manual intervention.
+            </div>
+            <div class="bento-card__impact">✦ 30% increase in critical defect detection</div>
+            <div class="bento-card__tags">
+              <span class="tag">Spark</span><span class="tag">Redshift</span><span class="tag">ETL</span>
+            </div>
           </div>
-          <div class="tech-icon tilt-card" data-stagger="5">
-            <img src="images/aws-logo.png" alt="AWS" class="tech-icon__image">
-            <span class="tech-icon__label">AWS</span>
-            <ul class="tech-icon__uses">
-              <li>Hosted and supported automation workflows</li>
-              <li>Integrated CloudWatch operational metrics</li>
-              <li>Maintained secure and scalable operations</li>
-            </ul>
+
+          <!-- Time & Motion -->
+          <div class="bento-card">
+            <div class="bento-card__num">06</div>
+            <div class="bento-card__title">Dynamic Time &amp; Motion Study Engine</div>
+            <div class="bento-card__desc">
+              In-app step builder to add/remove workflow steps dynamically. Step-wise time capture,
+              automatic AHT calculation, bottleneck detection, optimal vs achievable target modeling,
+              dynamic email routing per workflow.
+            </div>
+            <div class="bento-card__impact">✦ Identified automation candidates &amp; set data-backed targets</div>
+            <div class="bento-card__tags">
+              <span class="tag">Python</span><span class="tag">Analytics</span><span class="tag">AHT</span>
+            </div>
           </div>
-          <div class="tech-icon tilt-card" data-stagger="6">
-            <img src="images/quicksight-logo.png" alt="QuickSight" class="tech-icon__image">
-            <span class="tech-icon__label">QuickSight</span>
-            <ul class="tech-icon__uses">
-              <li>Built live admin and manager dashboards</li>
-              <li>Enabled self-serve workflow visibility</li>
-              <li>Tracked volumes, quality, and SLA trends</li>
-            </ul>
+
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <p class="section__label">// Experience</p>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-item__period">Jun 2022<br>Present</div>
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__content">
+              <div class="timeline-item__role">Sr. Business Analyst</div>
+              <div class="timeline-item__company">Amazon Prime Video · Trust &amp; Safety · Bengaluru</div>
+              <ul class="timeline-item__bullets">
+                <li>Built Sentinel - audit orchestration platform used by 250+ employees across 10+ workflows, saving 18 analyst-hours/day</li>
+                <li>Built GenAI chatbot on AWS Bedrock for T&amp;S data queries via Athena with Airflow-driven ingestion pipelines</li>
+                <li>Designed model accuracy measurement framework adopted by Ops, Science and Tech teams</li>
+                <li>Built Spark + Redshift ETL pipelines for dynamic risk detection - 30% improvement in critical defect catch rate</li>
+                <li>Delivered QuickSight dashboards and Lambda-generated HTML reports for leadership decision support</li>
+                <li>Resolved 100+ ad-hoc stakeholder analytics requests; became trusted data partner across teams</li>
+              </ul>
+            </div>
           </div>
-          <div class="tech-icon tilt-card" data-stagger="7">
-            <img src="images/excel-logo.png" alt="Excel" class="tech-icon__image">
-            <span class="tech-icon__label">Excel</span>
-            <ul class="tech-icon__uses">
-              <li>Built operational trackers and control sheets</li>
-              <li>Performed reconciliations and ad hoc analysis</li>
-              <li>Supported stakeholder-level reporting packs</li>
-            </ul>
+
+          <div class="timeline-item">
+            <div class="timeline-item__period">Mar 2022<br>May 2022</div>
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__content">
+              <div class="timeline-item__role">Catalog Specialist</div>
+              <div class="timeline-item__company">Amazon Prime Video · Trust &amp; Safety · Bengaluru</div>
+              <ul class="timeline-item__bullets">
+                <li>Content analysis and classification with 98% productivity and 100% quality</li>
+                <li>Managed sensitive data under strict governance protocols with a team of 40+</li>
+              </ul>
+            </div>
           </div>
-          <div class="tech-icon tilt-card" data-stagger="8">
-            <img src="images/vba-logo.png" alt="VBA" class="tech-icon__image">
-            <span class="tech-icon__label">VBA</span>
-            <ul class="tech-icon__uses">
-              <li>Developed 3 BAU macros for repetitive tasks</li>
-              <li>Scaled usage across 50+ employees</li>
-              <li>Saved around 10 hours each week</li>
-            </ul>
+
+          <div class="timeline-item">
+            <div class="timeline-item__period">Jan 2021<br>Mar 2022</div>
+            <div class="timeline-item__dot"></div>
+            <div class="timeline-item__content">
+              <div class="timeline-item__role">Operational Assistant</div>
+              <div class="timeline-item__company">MRF Ltd · Agra, Uttar Pradesh</div>
+              <ul class="timeline-item__bullets">
+                <li>Produced daily MIS reports for senior leadership from operational, inventory and sales datasets</li>
+                <li>Managed SAP-based operations - vendor liabilities, inventory reconciliation, stock transfer analysis</li>
+                <li>Prepared statutory TDS/TCS returns ensuring audit readiness and regulatory compliance</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <p class="section__label">// What I'm Good At</p>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <div class="skill-group__title">&#128736; Product &amp; Tool Building</div>
+            <div class="skill-group__items">
+              <span class="tag">Internal SaaS Platforms</span>
+              <span class="tag">Python + Flask</span>
+              <span class="tag">Queue &amp; Allocation Engines</span>
+              <span class="tag">Blind Review Workflows</span>
+              <span class="tag">Admin-Configurable UI</span>
+              <span class="tag">Slack &amp; Email Alerts</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group__title">&#128202; Data Engineering &amp; ETL</div>
+            <div class="skill-group__items">
+              <span class="tag">Spark Jobs</span>
+              <span class="tag">Redshift SQL Clusters</span>
+              <span class="tag">Airflow DAGs</span>
+              <span class="tag">DynamoDB → Redshift Sync</span>
+              <span class="tag">Dataset Ownership</span>
+              <span class="tag">Data Governance</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group__title">&#129302; GenAI &amp; ML Integration</div>
+            <div class="skill-group__items">
+              <span class="tag">AWS Bedrock</span>
+              <span class="tag">Text-to-SQL Training</span>
+              <span class="tag">Guardrail Config</span>
+              <span class="tag">Athena Query Execution</span>
+              <span class="tag">Model Accuracy Design</span>
+              <span class="tag">Statistical Extrapolation</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group__title">&#128161; BI &amp; Decision Support</div>
+            <div class="skill-group__items">
+              <span class="tag">Amazon QuickSight</span>
+              <span class="tag">Lambda HTML Reports</span>
+              <span class="tag">AHT &amp; SLA Modeling</span>
+              <span class="tag">Risk-Based Sampling</span>
+              <span class="tag">Defect Pattern Analysis</span>
+              <span class="tag">Executive Dashboards</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section-reveal">
-      <div class="contact__container">
-        <h2 class="contact__title section-title">
-          <span class="section-title__decorator" aria-hidden="true">//</span>
-          Get In Touch
-        </h2>
-        <p class="contact__subtitle">Have a project in mind or want to discuss opportunities? Let's connect.</p>
-        <div class="contact-buttons">
-          <a href="mailto:harikrishnanz98@gmail.com" class="cta-button cta-button--secondary magnetic-btn">
-            <span class="cta-button__icon">&#9993;</span> Email Me
-          </a>
-          <a href="tel:+919744754654" class="cta-button cta-button--secondary magnetic-btn">
-            <span class="cta-button__icon">&#128222;</span> Call Me
-          </a>
-          <a href="https://www.linkedin.com/in/harikriz" target="_blank" rel="noopener" 
-             class="cta-button cta-button--secondary magnetic-btn">
-            <span class="cta-button__icon">&#128279;</span> LinkedIn
-          </a>
+      <!-- TECH STACK -->
+      <section id="tech">
+        <p class="section__label">// Tech Stack</p>
+        <div class="tech-strip">
+          <div class="tech-chip">
+            <img src="images/python-logo.png" alt="Python">
+            <span class="tech-chip__label">Python</span>
+          </div>
+          <div class="tech-chip">
+            <img src="images/sql-logo.png" alt="SQL">
+            <span class="tech-chip__label">SQL</span>
+          </div>
+          <div class="tech-chip">
+            <img src="images/redshift-logo.png" alt="Redshift">
+            <span class="tech-chip__label">Redshift</span>
+          </div>
+          <div class="tech-chip">
+            <img src="images/dynamodb-logo.jpg" alt="DynamoDB">
+            <span class="tech-chip__label">DynamoDB</span>
+          </div>
+          <div class="tech-chip">
+            <img src="images/lambda-logo.png" alt="Lambda">
+            <span class="tech-chip__label">Lambda</span>
+          </div>
+          <div class="tech-chip">
+            <img src="images/aws-logo.png" alt="AWS">
+            <span class="tech-chip__label">AWS Bedrock</span>
+          </div>
+          <div class="tech-chip">
+            <img src="images/quicksight-logo.png" alt="QuickSight">
+            <span class="tech-chip__label">QuickSight</span>
+          </div>
+          <div class="tech-chip">
+            <img src="images/excel-logo.png" alt="Excel">
+            <span class="tech-chip__label">Excel</span>
+          </div>
+          <div class="tech-chip">
+            <img src="images/vba-logo.png" alt="VBA">
+            <span class="tech-chip__label">VBA</span>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+
+    </main>
+  </div>
 
   <!-- Back to Top -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <span>&#8593;</span>
-  </button>
-
-  <!-- Footer -->
-  <footer id="footer" class="footer">
-    <div class="footer__container">
-      <p class="footer__copyright">
-        &copy; 2025 Harikrishnan N. All rights reserved.
-      </p>
-      <div class="footer__social">
-        <a href="https://www.linkedin.com/in/harikriz" target="_blank" rel="noopener" 
-           class="footer__link">LinkedIn</a>
-        <a href="mailto:harikrishnanz98@gmail.com" class="footer__link">Email</a>
-      </div>
-    </div>
-  </footer>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
 
   <!-- Resume Modal -->
   <div class="resume-modal" id="resumeModal" role="dialog" aria-modal="true" aria-label="Resume">
     <div class="resume-modal__backdrop" id="resumeBackdrop"></div>
     <div class="resume-modal__container">
       <div class="resume-modal__header">
-        <span class="resume-modal__title">Resume</span>
+        <span class="resume-modal__title">HARIKRISHNAN N · RESUME</span>
         <div class="resume-modal__actions">
-          <a href="Harikrishnan_2026.docx" download class="resume-modal__download" aria-label="Download DOCX">
-            &#8681; Download DOCX
-          </a>
-          <button type="button" class="resume-modal__close" id="closeResumeBtn" aria-label="Close resume">&times;</button>
+          <a href="Harikrishnan_2026.pdf" download class="resume-modal__download">&#8681; Download PDF</a>
+          <button type="button" class="resume-modal__close" id="closeResumeBtn" aria-label="Close">&times;</button>
         </div>
       </div>
       <div class="resume-modal__body">
         <div class="resume-page">
 
-          <!-- Header -->
           <div class="resume-page__header">
             <h1 class="resume-page__name">HARIKRISHNAN N</h1>
             <p class="resume-page__contact">
               (+91) 9744754654 &nbsp;|&nbsp; harikrishnanz98@gmail.com &nbsp;|&nbsp;
-              <a href="https://www.linkedin.com/in/harikriz" target="_blank" rel="noopener">LinkedIn</a>
+              Bengaluru, India &nbsp;|&nbsp;
+              <a href="https://www.linkedin.com/in/harikriz" target="_blank" rel="noopener">linkedin.com/in/harikriz</a>
             </p>
           </div>
 
-          <!-- Summary -->
           <div class="resume-section">
-            <h2 class="resume-section__heading">PROFESSIONAL SUMMARY</h2>
+            <h2 class="resume-section__heading">Professional Summary</h2>
             <p class="resume-section__text">
-              Results-driven analyst with 4+ years of experience in trust &amp; safety, risk detection, and enforcement quality across high-volume content ecosystems. Skilled at designing automated integrity systems, building audit intelligence platforms, and translating complex datasets into actionable insights that drive decision-making at scale. Strong background in SQL-based analytics, Python automation, and scalable tooling adopted by hundreds of users globally, processing millions of records with measurable gains in accuracy, efficiency, and risk coverage.
+              Sr. Business Analyst with 6 years of experience building internal tools, data pipelines, GenAI solutions and BI dashboards that real teams depend on daily. At Amazon Prime Video, designed and built Sentinel - an end-to-end audit orchestration platform used by 250+ employees across 10+ workflows, saving 18 analyst-hours per day. Also built a GenAI chatbot on AWS Bedrock, a model accuracy measurement framework adopted by Ops, Science and Tech teams, and Spark/Redshift ETL pipelines for dynamic risk detection. Targeting BIE roles where I can automate manual workflows, build scalable data solutions and deliver actionable insights to business leaders.
             </p>
           </div>
 
-          <!-- Skills -->
           <div class="resume-section">
-            <h2 class="resume-section__heading">SKILLS</h2>
+            <h2 class="resume-section__heading">Skills</h2>
             <ul class="resume-skills">
-              <li>Trust &amp; Safety Analytics | Integrity &amp; Enforcement Quality</li>
-              <li>Risk Detection | Audit Design | Compliance Validation</li>
-              <li>SQL (Advanced) | Amazon Redshift | Large-Scale Data Analysis</li>
-              <li>Python Automation | Agent-Based Systems</li>
-              <li>Root Cause Analysis | Stakeholder Decision Support</li>
-              <li>SQL | Python | VBA | Excel | Redshift | AWS | ETL</li>
-              <li>Dashboarding &amp; Self-Serve Analytics (Amazon QuickSight)</li>
+              <li>Python (Flask, automation, agent systems) · SQL (Advanced, Redshift) · VBA · Git</li>
+              <li>AWS: Bedrock · Lambda · DynamoDB · S3 · Athena · Spark · CloudWatch · QuickSight</li>
+              <li>Data Engineering: ETL Pipelines · Airflow DAGs · Spark Jobs · Redshift Clusters</li>
+              <li>GenAI: AWS Bedrock chatbot training · text-to-SQL · guardrail configuration · Athena integration</li>
+              <li>BI &amp; Dashboarding: Amazon QuickSight · Lambda-generated HTML reports · executive dashboards</li>
+              <li>Analytics: Risk-based sampling · AHT/SLA modeling · defect pattern analysis · statistical extrapolation</li>
             </ul>
           </div>
 
-          <!-- Experience -->
           <div class="resume-section">
-            <h2 class="resume-section__heading">WORK EXPERIENCE</h2>
+            <h2 class="resume-section__heading">Work Experience</h2>
 
-            <!-- Role 1 -->
             <div class="resume-role">
               <div class="resume-role__header">
-                <span class="resume-role__company">Amazon Prime Video Trust and Safety</span>
+                <span class="resume-role__company">Amazon Prime Video - Trust &amp; Safety</span>
                 <span class="resume-role__location">Bengaluru, India</span>
               </div>
               <div class="resume-role__header">
-                <span class="resume-role__title">Trust and Safety Quality Analyst</span>
-                <span class="resume-role__period">June 2022 - Present</span>
+                <span class="resume-role__title">Sr. Business Analyst</span>
+                <span class="resume-role__period">June 2022 – Present</span>
               </div>
-
-              <p class="resume-role__category">Risk Detection, Audit Intelligence &amp; Enforcement Quality</p>
+              <p class="resume-role__category">Platform Engineering</p>
               <ul class="resume-role__bullets">
-                <li>Redesigned quality sampling and enforcement validation logic across 11 workflows, increasing detection of critical defects by 30% and strengthening audit confidence in high-volume review pipelines.</li>
-                <li>Conducted deep root-cause analyses on false-positive and false-negative enforcement signals, directly improving sampling accuracy and decision reliability.</li>
-                <li>Supported regulatory and compliance data requests across 3 global teams, ensuring accurate, traceable evidence under strict governance requirements.</li>
+                <li>Designed and built Sentinel - end-to-end audit orchestration platform (Python + Flask + DynamoDB + Redshift) used by 250+ employees across 10+ workflows, saving 18 analyst-hours/day and reducing manual touchpoints from 30+ to 3.</li>
+                <li>Replaced fragmented Excel/Quip/SharePoint ecosystem with a single platform featuring smart queues, blind review workflows, auto comparison engine, Redshift sync, SLA alerts and admin-configurable dynamic forms.</li>
               </ul>
-
-              <p class="resume-role__category">Agent-Based Automation &amp; Compliance Systems</p>
+              <p class="resume-role__category">GenAI &amp; Data Engineering</p>
               <ul class="resume-role__bullets">
-                <li>Designed and built an end-to-end agent-based automation system to replace manual "Walk the Store" compliance audits on the Prime Video storefront.</li>
-                <li>Automated storefront navigation, title discovery, and playback simulation to detect on-screen maturity rating and content descriptor (MRN/CD) overlays in real time.</li>
-                <li>Implemented screenshot capture and cloud-based processing to convert visual compliance signals into structured text evidence.</li>
-                <li>Cross-validated extracted MRN/CD signals against internal audit systems to automatically determine pass/fail outcomes.</li>
-                <li>Flagged mismatches, missing signals, and incorrect ratings for targeted root-cause investigation, eliminating repetitive manual reviews and improving detection reliability.</li>
-                <li>Enabled auditors to focus on exception analysis and enforcement accuracy rather than routine navigation tasks.</li>
+                <li>Built GenAI chatbot on AWS Bedrock trained on T&amp;S datasets - outputs natural language answers, SQL queries and downloadable CSVs via Athena. Ingested data via Airflow DAGs from central data lake to S3.</li>
+                <li>Built Spark + Redshift ETL pipelines with continuous feedback loop - audit outcomes auto-update risk detection thresholds, achieving 30% improvement in critical defect catch rate.</li>
               </ul>
-
-              <p class="resume-role__category">Analytics, Decision Support &amp; Stakeholder Influence</p>
+              <p class="resume-role__category">Analytics &amp; BI</p>
               <ul class="resume-role__bullets">
-                <li>Built centralized, self-serve quality dashboards used by 20+ managers, reducing reporting overhead and enabling faster risk-based decision-making.</li>
-                <li>Partnered with global stakeholders to explain enforcement anomalies, performance trends, and audit outcomes using data-backed narratives.</li>
-                <li>Translated complex SQL analyses into executive-ready insights influencing prioritization of quality and integrity initiatives.</li>
-              </ul>
-
-              <p class="resume-role__category">Automation &amp; Scalable Intelligence</p>
-              <ul class="resume-role__bullets">
-                <li>Developed Python-based analytics and monitoring tools used by 300+ employees, improving real-time visibility into data health and operational risks.</li>
-                <li>Automated detection of pipeline failures and data inconsistencies, saving approximately 2 analyst-hours daily and improving responsiveness.</li>
-                <li>Prototyped LLM-powered analytical tooling to generate Weekly Business Review insights directly from source tables, reducing dashboard dependency and accelerating leadership consumption of insights.</li>
+                <li>Designed model accuracy measurement framework with statistical extrapolation methodology - central QuickSight dashboard used by Ops, Science and Tech teams for ML model evaluation.</li>
+                <li>Delivered QuickSight dashboards and Lambda-generated HTML reports for leadership; resolved 100+ ad-hoc stakeholder analytics requests.</li>
               </ul>
             </div>
 
-            <!-- Role 2 -->
             <div class="resume-role">
               <div class="resume-role__header">
-                <span class="resume-role__company">Amazon Prime Video Trust and Safety</span>
+                <span class="resume-role__company">Amazon Prime Video - Trust &amp; Safety</span>
                 <span class="resume-role__location">Bengaluru, India</span>
               </div>
               <div class="resume-role__header">
                 <span class="resume-role__title">Catalog Specialist</span>
-                <span class="resume-role__period">March 2022 - May 2022</span>
+                <span class="resume-role__period">March 2022 – May 2022</span>
               </div>
               <ul class="resume-role__bullets">
-                <li>Conducted content analysis and classification with 98% productivity keeping 100% quality</li>
-                <li>Managed sensitive corporate data in secure environment with strict governance protocols</li>
-                <li>Collaborated with 40+ team members on data collection, validation, and weekly reporting</li>
+                <li>Content analysis and classification with 98% productivity and 100% quality in a 40+ member team.</li>
               </ul>
             </div>
 
-            <!-- Role 3 -->
             <div class="resume-role">
               <div class="resume-role__header">
-                <span class="resume-role__company">MRF</span>
+                <span class="resume-role__company">MRF Ltd</span>
                 <span class="resume-role__location">Agra, Uttar Pradesh</span>
               </div>
               <div class="resume-role__header">
                 <span class="resume-role__title">Operational Assistant</span>
-                <span class="resume-role__period">January 2021 - March 2022</span>
+                <span class="resume-role__period">January 2021 – March 2022</span>
               </div>
               <ul class="resume-role__bullets">
-                <li>Produced daily MIS reports for senior leadership by analyzing operational, inventory, and sales datasets.</li>
-                <li>Managed SAP-based operations including vendor liabilities, inventory reconciliation, and stock transfer analysis.</li>
-                <li>Prepared statutory TDS and TCS returns, ensuring audit readiness and regulatory compliances.</li>
+                <li>Produced daily MIS reports for senior leadership from operational, inventory and sales datasets via SAP.</li>
+                <li>Managed vendor liabilities, inventory reconciliation, stock transfer analysis and statutory TDS/TCS returns.</li>
               </ul>
             </div>
           </div>
 
-          <!-- Key Projects -->
           <div class="resume-section">
-            <h2 class="resume-section__heading">KEY PROJECTS</h2>
-
-            <div class="resume-project">
-              <h3 class="resume-project__title">1. Agent-Based Storefront Compliance Automation</h3>
-              <p><span class="resume-project__label">Problem:</span> Manual storefront audits were slow, inconsistent, and prone to missed compliance gaps.</p>
-              <p><span class="resume-project__label">Action:</span> Built a Python-based agent system to simulate human navigation, detect MR/CD overlays during playback, capture evidence, process it via cloud services, and validate signals against internal audit records.</p>
-              <p><span class="resume-project__label">Impact:</span> Eliminated repetitive manual audits, improved reliability of storefront compliance validation, and enabled focused root-cause investigations.</p>
-            </div>
-
-            <div class="resume-project">
-              <h3 class="resume-project__title">2. Sampling &amp; Enforcement Signal Optimization</h3>
-              <p><span class="resume-project__label">Problem:</span> Existing sampling logic under-detected high-risk defects.</p>
-              <p><span class="resume-project__label">Action:</span> Redesigned SQL-based detection thresholds using historical defect analysis.</p>
-              <p><span class="resume-project__label">Impact:</span> Increased critical issue detection by 30%, strengthening enforcement confidence.</p>
-            </div>
-          </div>
-
-          <!-- Education -->
-          <div class="resume-section">
-            <h2 class="resume-section__heading">EDUCATION</h2>
+            <h2 class="resume-section__heading">Education</h2>
             <ul class="resume-education">
-              <li>Bachelor of Commerce - Kerala University, S.D College (CGPA: 7.1/10) | 2016 - 2019</li>
-              <li>Tally and MS Office Certification - ICMAI Chapters Institution (Grade: A) | 2019 - 2020</li>
+              <li>Bachelor of Commerce - Kerala University, S.D. College &nbsp;|&nbsp; CGPA 7.2/10 &nbsp;|&nbsp; 2016–2019 (No Arrears)</li>
+              <li>Tally &amp; MS Office Certification - ICMAI Chapters Institution &nbsp;|&nbsp; Grade A &nbsp;|&nbsp; 2019–2020</li>
             </ul>
           </div>
 
@@ -751,7 +511,6 @@
     </div>
   </div>
 
-  <!-- JavaScript -->
   <script src="script.min.js" defer></script>
 </body>
 </html>
