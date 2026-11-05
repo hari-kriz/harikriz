@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harikrishnan N, Sr Business Analyst, Trust &amp; Safety Analytics</title>
   <meta name="description" content="Sr Business Analyst at Amazon Prime Video Trust &amp; Safety. Risk-based sampling, audit automation and compliance tooling for a streaming catalog, built in SQL, Python and AWS and used by 200+ people.">
-  <meta name="theme-color" content="#0b0d14">
+  <meta name="theme-color" content="#06141b">
   <link rel="canonical" href="https://harikriz.netlify.app/">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -47,8 +47,8 @@
       <button type="button" class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
       <nav class="nav__links" id="navLinks" aria-label="Sections">
         <a href="#about">About</a>
-        <a href="#impact">Impact</a>
         <a href="#work">Work</a>
+        <a href="#impact">Impact</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
         <a href="https://www.linkedin.com/in/harikriz" target="_blank" rel="me noopener" class="nav__ext">LinkedIn</a>
@@ -122,18 +122,24 @@
     <section class="section" id="about">
       <div class="container">
         <div class="section__head">
-          <span class="section__label">About</span>
-          <h2 class="section__title">Five years turning manual review work into systems</h2>
+          <div class="section__label"><span class="section__num">01</span>About</div>
+          <div>
+            <h2 class="section__title">Five years turning manual review work into systems</h2>
+            <p class="section__intro">Where I started, how the work changed, and the kind of problem I keep coming back to.</p>
+          </div>
         </div>
         <div class="about">
-          <div class="about__text">
+          <div class="card about__text">
             <p>
               I started in operations reporting, moved into content classification at Prime Video, and grew into the analyst who owns how titles are sampled, audited and measured for the Trust &amp; Safety org. The work is SQL on Redshift, Python services on AWS and QuickSight dashboards for leadership, but the job is deciding what to check, how much, and whether the answer can be trusted.
             </p>
             <p>
               I gravitate to problems where the manual process is the bottleneck and a system can take it over: an audit flow with 30 touchpoints, a storefront walkthrough that took a person a day, a sampling rule that never learned from its own misses.
             </p>
-            <div class="timeline">
+          </div>
+          <div class="card timeline">
+            <h3 class="card__title">Timeline</h3>
+            <div class="timeline__rows">
               <div class="timeline__row">
                 <span class="timeline__when">Jun 2022 to present</span>
                 <div class="timeline__what">Sr Business Analyst, Trust &amp; Safety Analytics<span>Amazon Prime Video Trust &amp; Safety, Bengaluru</span></div>
@@ -156,47 +162,19 @@
       </div>
     </section>
 
-    <section class="section" id="impact">
-      <div class="container">
-        <div class="section__head">
-          <span class="section__label">Impact</span>
-          <h2 class="section__title">What changed because these systems exist</h2>
-        </div>
-        <div class="stats">
-          <div class="stat">
-            <div class="stat__value">30<small>%</small></div>
-            <div class="stat__label">More critical defects caught</div>
-            <div class="stat__vs">vs the previous sampling logic, across 11 review workflows</div>
-          </div>
-          <div class="stat">
-            <div class="stat__value">200<small>+</small></div>
-            <div class="stat__label">People on the audit platform</div>
-            <div class="stat__vs">reviewers, auditors and managers across global teams</div>
-          </div>
-          <div class="stat">
-            <div class="stat__value">18<small> h</small></div>
-            <div class="stat__label">Analyst-hours saved per day</div>
-            <div class="stat__vs">vs the manual audit flow the platform replaced</div>
-          </div>
-          <div class="stat">
-            <div class="stat__value">30<small> to </small>3</div>
-            <div class="stat__label">Manual touchpoints per audit</div>
-            <div class="stat__vs">before and after the orchestration platform</div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" id="work">
+    <section class="section section--alt" id="work">
       <div class="container">
         <div class="section__head">
-          <span class="section__label">Work</span>
-          <h2 class="section__title">Six systems, from problem to result</h2>
-          <p class="section__intro">Each one started as a manual process someone was doing by hand. Internal names and data are left out; the shape of the problem and what it took to fix it are not.</p>
+          <div class="section__label"><span class="section__num">02</span>Work</div>
+          <div>
+            <h2 class="section__title">Six systems, from problem to result</h2>
+            <p class="section__intro">Each one started as a manual process someone was doing by hand. Internal names and data are left out; the shape of the problem and what it took to fix it are not.</p>
+          </div>
         </div>
         <div class="cases">
 
-          <article class="case">
+          <article class="card case">
             <div>
               <div class="case__num">01</div>
               <h3 class="case__title">Audit orchestration platform</h3>
@@ -216,7 +194,7 @@
             </div>
           </article>
 
-          <article class="case">
+          <article class="card case">
             <div>
               <div class="case__num">02</div>
               <h3 class="case__title">Storefront compliance agent</h3>
@@ -235,7 +213,7 @@
             </div>
           </article>
 
-          <article class="case">
+          <article class="card case">
             <div>
               <div class="case__num">03</div>
               <h3 class="case__title">Risk-based sampling with a daily feedback loop</h3>
@@ -254,7 +232,7 @@
             </div>
           </article>
 
-          <article class="case">
+          <article class="card case">
             <div>
               <div class="case__num">04</div>
               <h3 class="case__title">Accuracy pipeline for automated rating decisions</h3>
@@ -272,7 +250,7 @@
             </div>
           </article>
 
-          <article class="case">
+          <article class="card case">
             <div>
               <div class="case__num">05</div>
               <h3 class="case__title">Time and motion engine</h3>
@@ -291,7 +269,7 @@
             </div>
           </article>
 
-          <article class="case">
+          <article class="card case">
             <div>
               <div class="case__num">06</div>
               <h3 class="case__title">Review demand forecast for capacity planning</h3>
@@ -314,14 +292,51 @@
       </div>
     </section>
 
-    <section class="section" id="skills">
+    <section class="section" id="impact">
       <div class="container">
         <div class="section__head">
-          <span class="section__label">Skills</span>
-          <h2 class="section__title">What I bring to a team</h2>
+          <div class="section__label"><span class="section__num">03</span>Impact</div>
+          <div>
+            <h2 class="section__title">What changed because these systems exist</h2>
+            <p class="section__intro">The numbers that moved once the work above was live. Each one is measured against the manual process it replaced.</p>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="card stat">
+            <div class="stat__value">30<small>%</small></div>
+            <div class="stat__label">More critical defects caught</div>
+            <div class="stat__vs">vs the previous sampling logic, across 11 review workflows</div>
+          </div>
+          <div class="card stat">
+            <div class="stat__value">200<small>+</small></div>
+            <div class="stat__label">People on the audit platform</div>
+            <div class="stat__vs">reviewers, auditors and managers across global teams</div>
+          </div>
+          <div class="card stat">
+            <div class="stat__value">18<small> h</small></div>
+            <div class="stat__label">Analyst-hours saved per day</div>
+            <div class="stat__vs">vs the manual audit flow the platform replaced</div>
+          </div>
+          <div class="card stat">
+            <div class="stat__value">30<small> to </small>3</div>
+            <div class="stat__label">Manual touchpoints per audit</div>
+            <div class="stat__vs">before and after the orchestration platform</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <div class="section__label"><span class="section__num">04</span>Skills</div>
+          <div>
+            <h2 class="section__title">What I bring to a team</h2>
+            <p class="section__intro">The stack behind the systems above, grouped by what it is used for rather than by product name.</p>
+          </div>
         </div>
         <div class="skills">
-          <div class="skill">
+          <div class="card skill">
             <h3>Trust &amp; safety systems</h3>
             <ul>
               <li>Audit workflow design end to end</li>
@@ -331,7 +346,7 @@
               <li>Regulatory evidence requests</li>
             </ul>
           </div>
-          <div class="skill">
+          <div class="card skill">
             <h3>Data and automation</h3>
             <ul>
               <li>Python services with Flask on AWS</li>
@@ -341,7 +356,7 @@
               <li>VBA and Excel tooling for operations teams</li>
             </ul>
           </div>
-          <div class="skill">
+          <div class="card skill">
             <h3>Analytics</h3>
             <ul>
               <li>Risk-based sampling design</li>
@@ -351,7 +366,7 @@
               <li>Dataset ownership across teams</li>
             </ul>
           </div>
-          <div class="skill">
+          <div class="card skill">
             <h3>Decision support</h3>
             <ul>
               <li>QuickSight dashboards for leadership</li>
@@ -363,8 +378,8 @@
           </div>
         </div>
 
-        <div class="tools" id="tools">
-          <h3>Tools, and what I use them for</h3>
+        <div class="card tools" id="tools">
+          <h3 class="card__title">Tools, and what I use them for</h3>
           <div class="tools__grid">
             <dl>
               <div class="tool"><dt>Python</dt><dd>Flask services, browser agents, ETL, forecasting</dd></div>
@@ -385,12 +400,14 @@
 
     <section class="section" id="contact">
       <div class="container">
-        <div class="contact">
+        <div class="section__head">
+          <div class="section__label"><span class="section__num">05</span>Contact</div>
           <div>
-            <div class="section__head">
-              <span class="section__label">Contact</span>
-              <h2 class="section__title">Get in touch</h2>
-            </div>
+            <h2 class="section__title">Get in touch</h2>
+          </div>
+        </div>
+        <div class="card contact">
+          <div>
             <p class="contact__status"><span class="dot" aria-hidden="true"></span><span>Bengaluru, India<span id="localTime"></span></span></p>
             <p>Happy to talk about trust and safety analytics, audit automation or a role where those matter. Email is quickest; LinkedIn works too.</p>
           </div>
