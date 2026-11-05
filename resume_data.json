@@ -5,7 +5,7 @@
   "linkedin": "https://www.linkedin.com/in/harikriz",
   "website": "https://harikriz.netlify.app",
   "location": "Bengaluru, India",
-  "summary": "Analyst with 4+ years in trust and safety, risk detection and enforcement quality for a high-volume streaming catalog. I design the sampling logic, pipelines and tools that decide which titles get reviewed and check that the reviews were right: SQL on Amazon Redshift, Python services on AWS, QuickSight dashboards for leadership. Systems I built are used daily by 200+ people across global review teams, with measured gains in detection, hours saved and data reliability.",
+  "summary": "Analyst with five years in trust and safety, risk detection and enforcement quality for a high-volume streaming catalog. I design the sampling logic, pipelines and tools that decide which titles get reviewed and check that the reviews were right: SQL on Amazon Redshift, Python services on AWS, QuickSight dashboards for leadership. Systems I built are used daily by 200+ people across global review teams, with measured gains in detection, hours saved and data reliability.",
   "skills": [
     "Trust & safety analytics",
     "Risk-based sampling",
