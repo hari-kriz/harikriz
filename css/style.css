@@ -91,6 +91,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .hero__title { font-size: 48px; line-height: 1.08; font-weight: 500; letter-spacing: -0.02em; text-wrap: balance; }
 .hero__lede { margin-top: 24px; font-size: 18px; line-height: 1.6; color: var(--text-2); max-width: 36rem; }
 .hero__actions { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
+.hero__facts {
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line-strong);
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px;
+}
+.hero__facts dt { font-family: var(--mono); font-size: 12px; line-height: 16px; color: var(--muted); }
+.hero__facts dd { font-size: 14px; line-height: 20px; color: var(--text-2); margin-top: 2px; }
 .hero__visual { animation: enter var(--enter) var(--ease) 80ms both; }
 
 @keyframes enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
@@ -195,6 +201,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .case__fig { margin-top: 24px; display: grid; gap: 4px; }
 .case__fig b { font-family: var(--mono); font-feature-settings: 'tnum'; font-weight: 500; font-size: 32px; line-height: 1; }
 .case__fig span { font-size: 13px; color: var(--muted); }
+.case__fig--text b { font-family: var(--sans); font-size: 20px; line-height: 1.2; letter-spacing: -0.01em; }
 .case__tools { margin-top: 24px; font-family: var(--mono); font-size: 12px; color: var(--muted); line-height: 20px; }
 .case__body { display: grid; gap: 16px; }
 .case__body p { font-size: 15px; color: var(--text-2); }
@@ -263,6 +270,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .nav__links.is-open { display: flex; }
   .nav__links a { height: 40px; }
   .nav__links a.nav__ext { margin-left: 0; }
+  .hero__facts { grid-template-columns: 1fr; gap: 12px; }
   .timeline__row { grid-template-columns: 1fr; gap: 4px; }
   .card, .about__text, .contact { padding: 20px; }
   .stats { grid-template-columns: 1fr; gap: 12px; }
