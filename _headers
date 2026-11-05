@@ -8,8 +8,5 @@
 /css/*
   Cache-Control: public, max-age=86400
 
-/images/*
-  Cache-Control: public, max-age=2592000
-
 /*.pdf
   Cache-Control: public, max-age=86400

@@ -158,8 +158,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .section__intro { color: var(--text-2); max-width: 40rem; }
 
 /* About */
-.about { display: grid; grid-template-columns: 96px 1fr; gap: 48px; align-items: start; }
-.about__photo { width: 96px; height: 96px; border-radius: 12px; object-fit: cover; }
 .about__text p { color: var(--text-2); max-width: 40rem; }
 .about__text p + p { margin-top: 16px; }
 .timeline { margin-top: 40px; border-top: 1px solid var(--line); }
@@ -249,7 +247,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .nav__links.is-open { display: flex; }
   .nav__links a { height: 40px; }
   .nav__links a.nav__ext { margin-left: 0; }
-  .about { grid-template-columns: 1fr; gap: 24px; }
   .timeline__row { grid-template-columns: 1fr; gap: 4px; }
   .stats { grid-template-columns: 1fr; gap: 0; }
   .stat { padding: 20px 0; border-bottom: 1px solid var(--line); }

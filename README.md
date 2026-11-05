@@ -6,7 +6,6 @@ Personal portfolio of Harikrishnan N. Static, no build step.
 
 - `index.html`, `css/style.css`, `script.js`: the site. One page, one stylesheet, one small script (menu, section highlight, local time).
 - `404.html`, `_headers`: Netlify not-found page and security/cache headers.
-- `images/profile.jpg` (600px, Open Graph image) and `images/profile-192.jpg` (About photo).
 - `resume_data.json` -> `generate_resume.py` -> `Harikrishnan_2026.docx` and `.pdf`. Edit the JSON, run `python generate_resume.py`. PDF uses Word if installed, otherwise headless Chrome.
 - `robots.txt`, `sitemap.xml`, `google*.html`: search console.
 - `preview.py` serves the folder on http://localhost:8000; `push.py` commits and pushes.
