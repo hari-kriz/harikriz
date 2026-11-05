@@ -1,123 +1,101 @@
 {
   "name": "Harikrishnan N",
-  "title": "Trust & Safety Quality Analyst | Automation & Data Systems",
+  "title": "Sr Business Analyst, Trust & Safety Analytics",
   "email": "harikrishnanz98@gmail.com",
-  "phone": "+91 9744754654",
   "linkedin": "https://www.linkedin.com/in/harikriz",
   "website": "https://harikriz.netlify.app",
-  "summary": "Results-driven analyst with 4+ years of experience in trust & safety, risk detection, and enforcement quality across high-volume content ecosystems. Skilled at designing automated integrity systems, building audit intelligence platforms, and translating complex datasets into actionable insights that drive decision-making at scale. Strong background in SQL-based analytics, Python automation, and scalable tooling adopted by hundreds of users globally, processing millions of records with measurable gains in accuracy, efficiency, and risk coverage.",
+  "location": "Bengaluru, India",
+  "summary": "Analyst with 4+ years in trust and safety, risk detection and enforcement quality for a high-volume streaming catalog. I design the sampling logic, pipelines and tools that decide which titles get reviewed and check that the reviews were right: SQL on Amazon Redshift, Python services on AWS, QuickSight dashboards for leadership. Systems I built are used daily by 200+ people across global review teams, with measured gains in detection, hours saved and data reliability.",
   "skills": [
-    "Trust & Safety Analytics",
-    "Integrity & Enforcement Quality",
-    "Risk Detection",
-    "Audit Design",
-    "Compliance Validation",
-    "SQL (Advanced)",
+    "Trust & safety analytics",
+    "Risk-based sampling",
+    "Audit workflow design",
+    "Compliance validation",
+    "Root cause analysis",
+    "SQL (advanced)",
     "Amazon Redshift",
-    "Large-Scale Data Analysis",
-    "Python Automation",
-    "Agent-Based Systems",
-    "Root Cause Analysis",
-    "Stakeholder Decision Support",
-    "VBA",
-    "Excel",
-    "AWS",
+    "Python",
+    "Flask",
+    "Browser automation agents",
     "ETL",
-    "Dashboarding & Self-Serve Analytics (Amazon QuickSight)"
+    "AWS (Lambda, DynamoDB, CloudWatch)",
+    "Amazon QuickSight",
+    "Forecasting",
+    "Excel and VBA",
+    "Stakeholder decision support"
   ],
   "experience": [
     {
-      "role": "Trust and Safety Quality Analyst",
-      "company": "Amazon Prime Video Trust and Safety",
+      "role": "Sr Business Analyst, Trust & Safety Analytics",
+      "company": "Amazon Prime Video Trust & Safety",
       "location": "Bengaluru, India",
       "period": "June 2022 - Present",
       "categories": [
         {
-          "name": "Risk Detection, Audit Intelligence & Enforcement Quality",
+          "name": "Risk detection and enforcement quality",
           "bullets": [
-            "Redesigned quality sampling and enforcement validation logic across 11 workflows, increasing detection of critical defects by 30% and strengthening audit confidence in high-volume review pipelines.",
-            "Conducted deep root-cause analyses on false-positive and false-negative enforcement signals, directly improving sampling accuracy and decision reliability.",
-            "Supported regulatory and compliance data requests across 3 global teams, ensuring accurate, traceable evidence under strict governance requirements."
+            "Redesigned quality sampling and enforcement validation logic across 11 review workflows, increasing detection of critical defects by 30% and reducing audit noise.",
+            "Built a daily ETL feedback loop that re-tunes risk signals from audit outcomes, so sampling follows the latest defect pattern with minimal manual intervention.",
+            "Ran root-cause analyses on false-positive and false-negative enforcement signals, improving sampling accuracy and decision reliability.",
+            "Supported regulatory and compliance data requests across 3 global teams with accurate, traceable evidence under strict governance."
           ]
         },
         {
-          "name": "Agent-Based Automation & Compliance Systems",
+          "name": "Audit platforms and automation",
           "bullets": [
-            "Designed and built an end-to-end agent-based automation system to replace manual Walk the Store compliance audits on the Prime Video storefront.",
-            "Automated storefront navigation, title discovery, and playback simulation to detect on-screen maturity rating and content descriptor (MRN/CD) overlays in real time.",
-            "Implemented screenshot capture and cloud-based processing to convert visual compliance signals into structured text evidence.",
-            "Cross-validated extracted MRN/CD signals against internal audit systems to automatically determine pass/fail outcomes.",
-            "Flagged mismatches, missing signals, and incorrect ratings for targeted root-cause investigation, eliminating repetitive manual reviews and improving detection reliability.",
-            "Enabled auditors to focus on exception analysis and enforcement accuracy rather than routine navigation tasks."
+            "Designed and built an end-to-end audit orchestration platform (Python, Flask, DynamoDB, Redshift, CloudWatch): title ingestion, allocation, prioritisation, blind audit and comparison engine, automatic reassignment and alerts. Used by 200+ people, saves about 18 analyst-hours a day, manual touchpoints cut from 30+ to 3.",
+            "Built a browser-automation agent that replaced manual storefront compliance walkthroughs: navigates the storefront, simulates playback, captures on-screen maturity ratings and content descriptors via cloud OCR, and cross-checks them against audit records to produce pass/fail outcomes and flag mismatches.",
+            "Built an accuracy pipeline comparing automated rating decisions against human review in shadow mode, with defect classification, anomaly categories and daily dashboards for program owners.",
+            "Built a time and motion engine with an in-app step builder, step-level timing, handle-time rollups and bottleneck detection, used to set weekly targets and pick automation candidates."
           ]
         },
         {
-          "name": "Analytics, Decision Support & Stakeholder Influence",
+          "name": "Analytics and decision support",
           "bullets": [
-            "Built centralized, self-serve quality dashboards used by 20+ managers, reducing reporting overhead and enabling faster risk-based decision-making.",
-            "Partnered with global stakeholders to explain enforcement anomalies, performance trends, and audit outcomes using data-backed narratives.",
-            "Translated complex SQL analyses into executive-ready insights influencing prioritization of quality and integrity initiatives."
-          ]
-        },
-        {
-          "name": "Automation & Scalable Intelligence",
-          "bullets": [
-            "Developed Python-based analytics and monitoring tools used by 300+ employees, improving real-time visibility into data health and operational risks.",
-            "Automated detection of pipeline failures and data inconsistencies, saving approximately 2 analyst-hours daily and improving responsiveness.",
-            "Prototyped LLM-powered analytical tooling to generate Weekly Business Review insights directly from source tables, reducing dashboard dependency and accelerating leadership consumption of insights."
+            "Built centralised, self-serve quality dashboards used by 20+ managers, reducing reporting overhead and speeding up risk-based decisions.",
+            "Built a review demand forecast for next-year capacity planning from 36 months of catalog history, with backtested models and a leadership dashboard.",
+            "Developed Python monitoring tools used by 300+ employees for real-time visibility into data health and pipeline failures, saving about 2 analyst-hours daily.",
+            "Prototyped LLM-based tooling that drafts weekly business review insights directly from source tables.",
+            "Resolved 100+ ad-hoc data requests from cross-functional stakeholders; translated SQL analyses into executive-ready narratives."
           ]
         }
       ]
     },
     {
       "role": "Catalog Specialist",
-      "company": "Amazon Prime Video Trust and Safety",
+      "company": "Amazon Prime Video Trust & Safety",
       "location": "Bengaluru, India",
       "period": "March 2022 - May 2022",
       "bullets": [
-        "Conducted content analysis and classification with 98% productivity keeping 100% quality.",
-        "Managed sensitive corporate data in secure environment with strict governance protocols.",
-        "Collaborated with 40+ team members on data collection, validation, and weekly reporting."
+        "Content analysis and classification at 98% productivity with 100% quality.",
+        "Handled sensitive data under strict governance protocols.",
+        "Collaborated with 40+ team members on data collection, validation and weekly reporting."
       ]
     },
     {
       "role": "Operational Assistant",
       "company": "MRF",
-      "location": "Agra, Uttar Pradesh",
+      "location": "Agra, India",
       "period": "January 2021 - March 2022",
       "bullets": [
-        "Produced daily MIS reports for senior leadership by analyzing operational, inventory, and sales datasets.",
-        "Managed SAP-based operations including vendor liabilities, inventory reconciliation, and stock transfer analysis.",
-        "Prepared statutory TDS and TCS returns, ensuring audit readiness and regulatory compliances."
+        "Produced daily MIS reports for senior leadership from operational, inventory and sales data.",
+        "Managed SAP-based operations: vendor liabilities, inventory reconciliation, stock transfer analysis.",
+        "Prepared statutory TDS and TCS returns, keeping the unit audit-ready."
       ]
-    }
-  ],
-  "projects": [
-    {
-      "title": "Agent-Based Storefront Compliance Automation",
-      "problem": "Manual storefront audits were slow, inconsistent, and prone to missed compliance gaps.",
-      "action": "Built a Python-based agent system to simulate human navigation, detect MR/CD overlays during playback, capture evidence, process it via cloud services, and validate signals against internal audit records.",
-      "impact": "Eliminated repetitive manual audits, improved reliability of storefront compliance validation, and enabled focused root-cause investigations."
-    },
-    {
-      "title": "Sampling & Enforcement Signal Optimization",
-      "problem": "Existing sampling logic under-detected high-risk defects.",
-      "action": "Redesigned SQL-based detection thresholds using historical defect analysis.",
-      "impact": "Increased critical issue detection by 30%, strengthening enforcement confidence."
     }
   ],
   "education": [
     {
       "degree": "Bachelor of Commerce",
-      "institution": "Kerala University, S.D College",
+      "institution": "S.D College, Kerala University",
       "period": "2016 - 2019",
-      "grade": "CGPA: 7.1/10"
+      "grade": "CGPA 7.1/10"
     },
     {
       "degree": "Tally and MS Office Certification",
       "institution": "ICMAI Chapters Institution",
       "period": "2019 - 2020",
-      "grade": "Grade: A"
+      "grade": "Grade A"
     }
   ]
 }

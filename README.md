@@ -1,34 +1,20 @@
-# Personal Brand Website
+# harikriz.netlify.app
 
-Static personal brand website for Harikrishnan N.
+Personal portfolio of Harikrishnan N. Static, no build step.
 
-## Structure
+## Files
 
-- `index.html`
-- `style.min.css` (production CSS)
-- `script.min.js` (production JS)
-- `images/` (profile and tech icons)
-- `favicon.ico`
+- `index.html`, `css/style.css`, `script.js`: the site. One page, one stylesheet, one small script (menu, section highlight, local time).
+- `404.html`, `_headers`: Netlify not-found page and security/cache headers.
+- `images/profile.jpg` (600px, Open Graph image) and `images/profile-192.jpg` (About photo).
+- `resume_data.json` -> `generate_resume.py` -> `Harikrishnan_2026.docx` and `.pdf`. Edit the JSON, run `python generate_resume.py`. PDF uses Word if installed, otherwise headless Chrome.
+- `robots.txt`, `sitemap.xml`, `google*.html`: search console.
+- `preview.py` serves the folder on http://localhost:8000; `push.py` commits and pushes.
 
-Resume download is configured via Google Drive link in `index.html`.
+## Design
 
-## Local Preview
+Redesigned with the [unslop](https://github.com/heydamir/unslop) process by Damir Sokolovsky (CC BY 4.0): ink neutral ramp, one amber accent reserved for the live dot and the chart, Inter 400/500 with IBM Plex Mono for figures, no gradients, glows, emoji or looping motion. The hero visual is an illustrative audit panel built in HTML and SVG, not an image.
 
-Open `index.html` directly in a browser, or serve with any static server.
+## Deploy
 
-## Netlify Deployment
-
-1. Push this folder to a Git repository.
-2. In Netlify, create a new site from that repository.
-3. Keep build settings empty:
-   - Build command: _(none)_
-   - Publish directory: `/` (root)
-4. Deploy.
-
-## Contact Form
-
-The contact form uses Netlify Forms:
-
-- `<form name="contact" method="POST" data-netlify="true">`
-- Includes `form-name` hidden input.
-- JavaScript validates fields before submission and posts to `/`.
+Push to `main`. Netlify publishes the repository root with no build command.

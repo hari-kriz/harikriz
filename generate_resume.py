@@ -193,15 +193,25 @@ def generate_docx(data, out="Harikrishnan_2026.docx"):
     r = p.add_run(clean(data["name"]).upper())
     sf(r, size=NAME_SIZE, bold=True, color=NAVY)
 
+    # ===== TITLE (centered) =====
+    if data.get("title"):
+        p = doc.add_paragraph()
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p.paragraph_format.space_after = Pt(2)
+        set_line_spacing(p)
+        r = p.add_run(clean(data["title"]))
+        sf(r, size=11, color=DGRAY)
+
     # ===== CONTACT (centered) =====
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_after = Pt(2)
     set_line_spacing(p)
     parts = []
-    if data.get("phone"): parts.append(data["phone"])
+    if data.get("location"): parts.append(data["location"])
     if data.get("email"): parts.append(data["email"])
-    if data.get("linkedin"): parts.append(data["linkedin"])
+    if data.get("linkedin"): parts.append(data["linkedin"].replace("https://www.", ""))
+    if data.get("website"): parts.append(data["website"].replace("https://", ""))
     r = p.add_run("   |   ".join(parts))
     sf(r, size=9.5, color=GRAY)
 
@@ -303,7 +313,91 @@ def generate_docx(data, out="Harikrishnan_2026.docx"):
     return out
 
 
-def generate_pdf(docx_path, pdf_path="Harikrishnan_2026.pdf"):
+def _html_escape(t):
+    return (clean(t).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
+
+
+def generate_html(data, out="resume_print.html"):
+    """Same content as the DOCX, as a print-styled HTML page (used for the PDF)."""
+    e = _html_escape
+    h = []
+    h.append("""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>%s</title>
+<style>
+@page { size: A4; margin: 18mm 20mm; }
+body { font-family: Calibri, 'Segoe UI', Arial, sans-serif; font-size: 10.5pt; line-height: 1.3; color: #1e1e1e; margin: 0; }
+h1 { font-size: 20pt; margin: 0; text-align: center; color: #2b2b5e; letter-spacing: 0.02em; }
+.contact { text-align: center; font-size: 9.5pt; color: #646464; margin: 3pt 0 6pt; padding-bottom: 6pt; border-bottom: 1.5pt solid #2b2b5e; }
+.title { text-align: center; font-size: 11pt; color: #3c3c3c; margin: 2pt 0 0; }
+h2 { font-size: 12pt; color: #2b2b5e; margin: 12pt 0 4pt; padding-bottom: 2pt; border-bottom: 0.75pt solid #2b2b5e; text-transform: uppercase; break-after: avoid; }
+p { margin: 2pt 0; color: #3c3c3c; }
+.skills { font-size: 10pt; color: #3c3c3c; }
+.role { display: flex; justify-content: space-between; margin-top: 8pt; break-after: avoid; }
+.role b { color: #1e1e1e; }
+.role2 { display: flex; justify-content: space-between; margin-bottom: 2pt; break-after: avoid; }
+.role2 b { color: #2b2b5e; }
+.meta { font-size: 10pt; color: #646464; font-style: italic; }
+.cat { font-size: 10pt; font-weight: bold; color: #3c3c3c; margin: 5pt 0 1pt; break-after: avoid; }
+ul { margin: 0; padding-left: 14pt; }
+li { margin: 1.5pt 0; color: #1e1e1e; break-inside: avoid; }
+.proj { margin-top: 5pt; break-inside: avoid; }
+.proj b { color: #1e1e1e; }
+.proj p { padding-left: 12pt; font-size: 10pt; }
+.proj p b { color: #2b2b5e; }
+.edu { display: flex; justify-content: space-between; margin-top: 4pt; }
+</style></head><body>""" % e(data["name"]))
+    h.append("<h1>%s</h1>" % e(data["name"]).upper())
+    h.append('<p class="title">%s</p>' % e(data["title"]))
+    parts = []
+    if data.get("location"): parts.append(e(data["location"]))
+    if data.get("email"): parts.append(e(data["email"]))
+    if data.get("linkedin"): parts.append(e(data["linkedin"].replace("https://www.", "")))
+    if data.get("website"): parts.append(e(data["website"].replace("https://", "")))
+    h.append('<div class="contact">%s</div>' % "&nbsp;&nbsp;|&nbsp;&nbsp;".join(parts))
+    h.append("<h2>Professional summary</h2><p>%s</p>" % e(data["summary"]))
+    h.append("<h2>Skills</h2><p class=\"skills\">%s</p>" % "&nbsp; | &nbsp;".join(e(sk) for sk in data["skills"]))
+    h.append("<h2>Work experience</h2>")
+    for job in data["experience"]:
+        h.append('<div class="role"><b>%s</b><span class="meta">%s</span></div>' % (e(job["company"]), e(job.get("location", ""))))
+        h.append('<div class="role2"><b>%s</b><span class="meta">%s</span></div>' % (e(job["role"]), e(job["period"])))
+        if job.get("categories"):
+            for cat in job["categories"]:
+                h.append('<div class="cat">%s</div><ul>%s</ul>' % (e(cat["name"]), "".join("<li>%s</li>" % e(b) for b in cat["bullets"])))
+        elif job.get("bullets"):
+            h.append("<ul>%s</ul>" % "".join("<li>%s</li>" % e(b) for b in job["bullets"]))
+    if data.get("projects"):
+        h.append("<h2>Key projects</h2>")
+        for i, proj in enumerate(data["projects"], 1):
+            h.append('<div class="proj"><b>%d. %s</b>' % (i, e(proj["title"])))
+            for key in ("problem", "action", "impact"):
+                if proj.get(key):
+                    h.append("<p><b>%s:</b> %s</p>" % (key.capitalize(), e(proj[key])))
+            h.append("</div>")
+    h.append("<h2>Education</h2>")
+    for edu in data["education"]:
+        grade = " (%s)" % e(edu["grade"]) if edu.get("grade") else ""
+        h.append('<div class="edu"><span><b>%s</b> &mdash; %s%s</span><span class="meta">%s</span></div>' % (e(edu["degree"]), e(edu["institution"]), grade, e(edu["period"])))
+    h.append("</body></html>")
+    with open(out, "w", encoding="utf-8") as f:
+        f.write("\n".join(h))
+    return out
+
+
+def _find_chrome():
+    cands = [
+        os.environ.get("CHROME_PATH", ""),
+        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+        r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+    ]
+    pw = os.path.join(os.path.expanduser("~"), "AppData", "Local", "ms-playwright")
+    if os.path.isdir(pw):
+        for d in sorted(os.listdir(pw), reverse=True):
+            if d.startswith("chromium"):
+                cands.append(os.path.join(pw, d, "chrome-win", "chrome.exe"))
+    return next((c for c in cands if c and os.path.isfile(c)), None)
+
+
+def generate_pdf(docx_path, pdf_path="Harikrishnan_2026.pdf", data=None):
+    """Prefer Word if installed; otherwise print the HTML version with headless Chrome."""
     try:
         import win32com.client
         word = win32com.client.Dispatch("Word.Application")
@@ -314,8 +408,20 @@ def generate_pdf(docx_path, pdf_path="Harikrishnan_2026.pdf"):
         word.Quit()
         return pdf_path
     except Exception:
-        print("PDF: convert DOCX manually via Word.")
+        pass
+    chrome = _find_chrome()
+    if data is None or chrome is None:
+        print("PDF: no Word or Chrome found. Convert the DOCX manually.")
         return None
+    html = os.path.abspath(generate_html(data))
+    subprocess.run([chrome, "--headless=new", "--disable-gpu", "--no-pdf-header-footer",
+                    "--print-to-pdf=" + os.path.abspath(pdf_path), "file:///" + html.replace("\\", "/")],
+                   capture_output=True)
+    try:
+        os.remove(html)
+    except OSError:
+        pass
+    return pdf_path if os.path.isfile(pdf_path) else None
 
 
 def count_pages(docx_path):
@@ -342,7 +448,7 @@ def main():
         print(f"Page count: {pages}")
         if pages != 2:
             print(f"WARNING: Document is {pages} page(s), target is 2.")
-    generate_pdf(docx_path)
+    generate_pdf(docx_path, data=data)
     print("Done.")
 
 

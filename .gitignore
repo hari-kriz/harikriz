@@ -26,3 +26,7 @@ personal_brand_website_spec.md
 
 # Logs
 *.log
+
+# Local render helper
+_shot.html
+unslop-story/
