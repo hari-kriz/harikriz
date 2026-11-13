@@ -12,7 +12,7 @@ Personal portfolio of Harikrishnan N. Static, no build step.
 
 ## Design
 
-Redesigned with the [unslop](https://github.com/heydamir/unslop) process by Damir Sokolovsky (CC BY 4.0): a six-step slate palette (#06141B to #CCD0CF) with no second hue, numbered chapter sections with framed cards, Inter 400/500 with IBM Plex Mono for figures, no gradients, glows, emoji or looping motion. The hero visual is an illustrative audit panel built in HTML and SVG, not an image.
+Redesigned with the [unslop](https://github.com/heydamir/unslop) process by Damir Sokolovsky (CC BY 4.0): a six-step slate palette (#06141B to #CCD0CF) with no second hue, numbered chapter sections with framed cards, Inter 400/500 with IBM Plex Mono for figures, no gradients, glows, emoji or looping motion.
 
 ## Deploy
 

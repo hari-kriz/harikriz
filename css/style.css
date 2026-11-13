@@ -77,27 +77,20 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .nav__toggle:hover { color: var(--text); background: var(--raised); }
 
 /* Hero */
-.hero { padding: 72px 0 88px; }
-.hero .container {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 64px;
-  align-items: center;
-  min-height: min(calc(100vh - var(--nav-h) - 160px), 640px);
-}
+.hero { padding: 96px 0 88px; }
+.hero__text { max-width: 44rem; }
 .hero__text { animation: enter var(--enter) var(--ease) both; }
 .hero__kicker { font-family: var(--mono); font-size: 13px; line-height: 20px; color: var(--muted); margin-bottom: 20px; display: flex; align-items: flex-start; gap: 10px; }
 .hero__kicker .dot { margin-top: 6px; }
-.hero__title { font-size: 48px; line-height: 1.08; font-weight: 500; letter-spacing: -0.02em; text-wrap: balance; }
-.hero__lede { margin-top: 24px; font-size: 18px; line-height: 1.6; color: var(--text-2); max-width: 36rem; }
+.hero__title { font-size: 56px; line-height: 1.06; font-weight: 500; letter-spacing: -0.02em; text-wrap: balance; }
+.hero__lede { margin-top: 24px; font-size: 18px; line-height: 1.6; color: var(--text-2); max-width: 38rem; }
 .hero__actions { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
 .hero__facts {
   margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line-strong);
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 24px;
 }
 .hero__facts dt { font-family: var(--mono); font-size: 12px; line-height: 16px; color: var(--muted); }
 .hero__facts dd { font-size: 14px; line-height: 20px; color: var(--text-2); margin-top: 2px; }
-.hero__visual { animation: enter var(--enter) var(--ease) 80ms both; }
 
 @keyframes enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
@@ -113,49 +106,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .btn--secondary { background: var(--surface); color: var(--text); border: 1px solid var(--raised); }
 .btn--secondary:hover { background: var(--raised); }
 
-/* Status dot. Monochrome: filled light = live/flagged, filled slate = pass, ring = mismatch. */
+/* Status dot: kicker and contact. */
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
-.dot--pos { background: var(--slate); }
-.dot--neg { background: transparent; box-shadow: inset 0 0 0 1.5px var(--text); }
-
-/* Preview panel */
-.panel {
-  background: var(--surface);
-  border: 1px solid var(--line-strong);
-  border-radius: 16px;
-  padding: 20px;
-  display: grid;
-  gap: 20px;
-}
-.panel__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.panel__title { font-size: 15px; font-weight: 500; }
-.panel__sub { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 2px; }
-.panel__live { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--text-2); }
-
-.chart { display: grid; gap: 12px; }
-.chart__legend { display: flex; gap: 20px; font-family: var(--mono); font-size: 12px; color: var(--text-2); }
-.chart__legend span { display: inline-flex; align-items: center; gap: 8px; }
-.chart__legend i { width: 16px; height: 2px; border-radius: 1px; background: var(--slate); display: inline-block; }
-.chart__legend i.is-accent { background: var(--accent); }
-.chart svg { width: 100%; height: auto; display: block; }
-.chart text { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
-.chart .grid { stroke: var(--line); stroke-width: 1; }
-.chart .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
-.chart .line--base { stroke: var(--slate); }
-.chart .line--accent { stroke: var(--accent); }
-.chart .mark { fill: var(--accent); }
-
-.queue { border-top: 1px solid var(--line); padding-top: 4px; }
-.queue__row {
-  display: grid; grid-template-columns: 96px 1fr auto; gap: 16px; align-items: center;
-  height: 36px; font-size: 13px; color: var(--text-2);
-  border-bottom: 1px solid var(--line);
-}
-.queue__row:last-child { border-bottom: 0; }
-.queue__row.is-head { color: var(--muted); font-family: var(--mono); font-size: 12px; height: 32px; }
-.queue__id { font-family: var(--mono); font-size: 12px; color: var(--text); }
-.queue__state { display: inline-flex; align-items: center; gap: 8px; min-width: 88px; }
-.panel__foot { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 
 /* Sections: each one is a numbered chapter with a ruled header and framed content. */
 .section { padding: 80px 0; border-top: 1px solid var(--line-strong); }
@@ -243,9 +195,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* Responsive */
 @media (max-width: 960px) {
-  .hero .container { grid-template-columns: 1fr; gap: 48px; min-height: 0; }
-  .hero { padding: 48px 0 80px; }
+  .hero { padding: 64px 0 72px; }
   .hero__title { font-size: 44px; }
+  .hero__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .section__head { grid-template-columns: 1fr; gap: 12px; }
   .section__label { padding-top: 0; grid-auto-flow: column; justify-content: start; gap: 12px; }
   .about { grid-template-columns: 1fr; }
@@ -277,12 +229,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .skills { grid-template-columns: 1fr; gap: 12px; }
   .tool { grid-template-columns: 1fr; gap: 2px; }
   .contact { grid-template-columns: 1fr; gap: 24px; align-items: start; }
-  .queue__row { grid-template-columns: 80px 1fr auto; gap: 12px; }
-  .panel { padding: 16px; }
 }
 
 @media print {
-  .nav, .hero__visual, .hero__actions, .contact__actions, .skip { display: none; }
+  .nav, .hero__actions, .contact__actions, .skip { display: none; }
   body { background: #fff; color: #111; font-size: 11pt; }
   .section, .hero { padding: 24px 0; border: 0; }
   .section--alt { background: #fff; }
@@ -297,6 +247,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero__text, .hero__visual { animation: none; }
+  .hero__text { animation: none; }
   * { transition-duration: 0.01ms !important; }
 }
